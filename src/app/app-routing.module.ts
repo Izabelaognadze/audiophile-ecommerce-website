@@ -8,19 +8,19 @@ import {SpeakersComponent} from './components/speakers/speakers.component'
 
 const routes: Routes = [
   {
-    path:"/", component: MainPageComponent
+    path:"", component: MainPageComponent
   },
   {
-    path:"/home",component:HomeComponent
+    path:"home",component:HomeComponent
   },
   {
-    path:"/headphones",component:HeadphonesComponent
+    path:"headphones",component:HeadphonesComponent
   },
   {
-    path:"/earphones",component:EarphonesComponent
+    path:"earphones",component:EarphonesComponent
   },
   {
-    path:"/speakers",component:SpeakersComponent
+    path:"speakers",component:SpeakersComponent
   },
 ];
 
