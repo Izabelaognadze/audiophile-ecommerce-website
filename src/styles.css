@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .pages a {
+    @apply hover:text-clrDarkOrange cursor-pointer mx-auto md:mx-0;
+  }
+  .links a {
+  }
+}
