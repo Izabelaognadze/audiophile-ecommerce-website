@@ -1,4 +1,4 @@
-# AudiophileEcommerceWebsite
+# Audiophile E-commerce Website - Angular + Tailwind CSS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
