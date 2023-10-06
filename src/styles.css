@@ -4,8 +4,9 @@
 
 @layer components {
   .pages a {
-    @apply hover:text-clrDarkOrange cursor-pointer mx-auto md:mx-0;
+    @apply hover:text-clrDarkOrange cursor-pointer mx-auto md:mx-0 uppercase;
   }
-  .links a {
+  .common-margins {
+    @apply mx-6 md:mx-10 lg:mx-auto max-w-[1110px];
   }
 }
