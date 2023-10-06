@@ -7,9 +7,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HeadphonesComponent } from './components/headphones/headphones.component';
 import { SpeakersComponent } from './components/speakers/speakers.component';
 import { EarphonesComponent } from './components/earphones/earphones.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeadlineComponent } from './design-system/headline/headline.component';
+import { DesignSystemModule } from './design-system/design-system.module';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,13 @@ import { FooterComponent } from './components/footer/footer.component';
     HeadphonesComponent,
     SpeakersComponent,
     EarphonesComponent,
-    MainPageComponent,
     HeaderComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DesignSystemModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { HeadlineComponent } from './headline/headline.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeadlineComponent
+  ],
   imports: [
     CommonModule
   ],
-  exports:[]
+  exports:[
+    HeadlineComponent,
+  ]
 })
 export class DesignSystemModule { }
