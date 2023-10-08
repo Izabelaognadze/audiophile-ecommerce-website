@@ -11,7 +11,8 @@ module.exports = {
         'clrLightBlack':'#101010',
         'clrDarkGrey':'#F1F1F1',
         'clrLightGrey':'#FAFAFA',
-        'clrBg':'#0E0E0E'
+        'clrBg':'#0E0E0E',
+        'clrbgHover':'#4C4C4C',
       },
       fontFamily:{
         MainFont: "'Manrope', sans-serif",
