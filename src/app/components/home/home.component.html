@@ -1,5 +1,14 @@
 <app-header></app-header>
-<div class="py-7 bg-red-300"></div>
+
+<div class="w-full text-center lg:text-start bg-[url('/assets/home/mobile/image-header.jpg')] md:bg-[url('/assets/home/tablet/image-header.jpg')] lg:bg-[url('/assets/home/desktop/image-hero.jpg')]">
+    <div class="max-w-[1110px] mx-auto">
+        <p class="text-white opacity-50 text-sm font-normal tracking-[10px] uppercase mb-4 md:mb-6">NEW PRODUCT</p>
+        <h1 class="text-4xl md:text-[56px] text-white uppercase font-bold leading-10 md:leading-[58px] tracking-[1.286px] md:tracking-[2px]">XX99 Mark II HeadphoneS</h1>
+        <p class="text-white mt-6 mb-7 md:mb-10 opacity-75 font-medium text-[15px]">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+        <button class="w-40 h-12 uppercase bg-clrDarkOrange hover:bg-clrLightOrange text-white font-bold tracking-[1px] text-[13px] mx-auto lg:mx-0">see product</button>
+    </div>
+</div>
+
 <div class="relative overflow-hidden lg:gap-32 bg-clrDarkOrange text-white flex items-center flex-col lg:flex-row common-margins rounded-lg mt-[120px] md:mt-24 lg:mt-40 font-MainFont">
     <img src="assets/home/desktop/pattern-circles.svg" alt="" class="absolute scale-[173%] md:scale-110 md:-translate-y-72 lg:translate-y-40 lg:-translate-x-40">
     <img src="assets/home/mobile/image-speaker-zx9.png" alt="" class="block md:hidden mt-[57px] max-w-[172px]">
@@ -12,15 +21,26 @@
     </div>
 </div>
 
-<div class="common-margins my-6 relative">
-    <img src="../../../assets/home/mobile/image-speaker-zx7.jpg" class="block md:hidden rounded-lg absolute inset-0">
-    <img src="../../../assets/home/tablet/image-speaker-zx7.jpg" class="hidden md:block lg:hidden rounded-lg absolute">
-    <img src="../../../assets/home/desktop/image-speaker-zx7.jpg" class="hidden lg:block rounded-lg absolute">
-    <div class="flex flex-col gap-8">
-        <h3 class="">ZX7 SPEAKER</h3>
-        <button>see product</button>
+<div class="common-margins rounded-lg my-6 md:my-8 lg:my-12 bg-cover font-MainFont bg-[url('/assets/home/mobile/image-speaker-zx7.jpg')] md:bg-[url('/assets/home/tablet/image-speaker-zx7.jpg')] lg:bg-[url('/assets/home/desktop/image-speaker-zx7.jpg')]">
+    <div class="flex flex-col gap-8 py-[101px] pl-[50px] md:pl-[58px] lg:pl-[127px]">
+        <h3 class="uppercase tracking-[2px] font-bold text-[28px]">ZX7 SPEAKER</h3>
+        <button class="uppercase border-[1px] border-black w-40 h-12 font-bold text-[13px] tracking-[1px] hover:bg-black hover:text-white">see product</button>
     </div>
 </div>
+
+<div class="common-margins flex flex-col md:flex-row gap-6 md:gap-[11px] lg:gap-[30px]">
+    <div class="md:w-[50%]">
+        <img src="../../../assets/home/mobile/image-earphones-yx1.jpg" class="block md:hidden rounded-lg w-full">
+        <img src="../../../assets/home/mobile/image-earphones-yx1.jpg" class="hidden md:block lg:hidden rounded-lg w-full">
+        <img src="../../../assets/home/mobile/image-earphones-yx1.jpg" class="hidden lg:block rounded-lg w-full">
+    </div>
+    <div class="flex flex-col gap-8 justify-center pl-[50px] md:pl-[58px] lg:pl-[127px] bg-clrDarkGrey md:w-[50%] min-h-[200px]">
+        <h3 class="uppercase tracking-[2px] font-bold text-[28px]">YX1 EARPHONES</h3>
+        <button class="uppercase border-[1px] border-black w-40 h-12 font-bold text-[13px] tracking-[1px] hover:bg-black hover:text-white">see product</button>
+    </div>
+</div>
+
+
 <app-best-gear></app-best-gear>
 <app-footer></app-footer>
 <!-- <img src="../../../assets/shared/"  -translate-y-20 alt=""> -->
