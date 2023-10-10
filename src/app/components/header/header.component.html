@@ -1,10 +1,10 @@
-<div class="bg-clrHomeBg font-MainFont">
+<div [ngClass]="white === 'white' ? '' : 'bg-black'" class=" font-MainFont">
     <div class="flex flex-row text-white py-8 lg:py-9 justify-between common-margins">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="my-auto block hover:transition-all lg:hidden hover:animate-pulse">
             <rect width="16" height="3" fill="white"/>
             <rect y="6" width="16" height="3" fill="white"/>
             <rect y="12" width="16" height="3" fill="white"/>
-          </svg>
+        </svg>
         <a routerLink="/"><img src="assets/shared/desktop/logo.svg" alt="audiophile logo"></a>
         <div class="hidden lg:flex gap-[34px] uppercase lg:-translate-x-[50px]">
             <a class="hover:text-clrDarkOrange cursor-pointer" routerLink="/">Home</a>
