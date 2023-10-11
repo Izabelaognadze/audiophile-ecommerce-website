@@ -1,7 +1,9 @@
 <div [ngClass]="reversed === 'reverse' ? 'lg:flex-row-reverse':'lg:flex-row'" class="flex flex-col common-margins gap-8 md:gap-[52px] lg:gap-[125px] font-MainFont">
-    <img src={{imgMob}} alt="mobile item picture" class="block md:hidden object-cover rounded-lg">
-    <img src={{imgTab}} alt="tablet item picture" class="hidden md:block lg:hidden object-cover rounded-lg">
-    <img src={{imgDesk}} alt="Desktop item picture" class="hidden lg:block max-w-[540px] rounded-lg">
+    <div class="responsive-images">
+        <img src={{imgMob}} alt="mobile item picture" class="object-cover rounded-lg">
+        <img src={{imgTab}} alt="tablet item picture" class="object-cover rounded-lg">
+        <img src={{imgDesk}} alt="Desktop item picture" class="max-w-[540px] rounded-lg">
+    </div>
     <div class="flex flex-col lg:my-auto text-center lg:text-start">
         <p [ngClass]="newProduct === 'new' ? 'block': 'hidden'" class="text-clrDarkOrange text-sm font-normal tracking-[10px] uppercase mb-6 md:mb-4">NEW PRODUCT</p>
         <h2 class="text-[28px] md:text-[40px] uppercase font-bold leading-normal tracking-[1px] md:leading-[44px] md:tracking-[1.429px]">{{title}}</h2>

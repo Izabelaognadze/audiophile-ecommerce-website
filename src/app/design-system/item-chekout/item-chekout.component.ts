@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-chekout',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./item-chekout.component.css']
 })
 export class ItemChekoutComponent {
-
+  @Input() public goBackLink = "";
+  @Input() public mobImg = "";
+  @Input() public tabImg = "";
+  @Input() public desImg = "";
+  @Input() public newProduct = "";
+  @Input() public header = "";
+  @Input() public paragraph = "";
+  @Input() public price = "";
 }
