@@ -1,5 +1,9 @@
-<!-- <div [ngClass]="productType === 'headphones' ? 'bg-black text-white' : (productType === 'earphones' ? 'bg-white text-black' : 'bg-black text-white')" class="bg-clrDarkGrey flex flex-col mt-72 font-MainFont text-center rounded-lg">
-    <img  class="-translate-y-[50%] object-contain"  src={{mainImg}} alt="">
-    <h3 class="text-lg font-bold tracking-widest uppercase">{{title}}</h3>
-    <p>shop</p>
-</div> -->
+<div  class="bg-clrDarkGrey flex flex-col font-MainFont text-center rounded-lg">
+    <img  class="-translate-y-[30%] object-contain bg-cover max-h-44"  src={{mainImg}} alt="">
+    <div class="flex flex-col gap-[17px] lg:gap-[15px] -translate-y-[80%]">
+        <h3 class="text-lg font-bold tracking-widest uppercase">{{title}}</h3>
+        <p class="">shop</p>
+    </div>
+</div>
+
+<!-- [ngClass]="productType === 'headphones' ? 'bg-black text-white' : (productType === 'earphones' ? 'bg-white text-black' : 'bg-black text-white')" -->

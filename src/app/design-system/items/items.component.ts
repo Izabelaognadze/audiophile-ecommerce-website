@@ -13,6 +13,7 @@ export class ItemsComponent {
   @Input () text = "";
   @Input () reversed = "";
   @Input () newProduct = "";
+  @Input() linkTo = "";
   
   constructor(){}
 }

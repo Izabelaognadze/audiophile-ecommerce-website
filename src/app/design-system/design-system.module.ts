@@ -8,6 +8,7 @@ import { MayAlsoLikeComponent } from './may-also-like/may-also-like.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ItemChekoutComponent } from './item-chekout/item-chekout.component';
 import { ItemFeaturesComponent } from './item-features/item-features.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ItemFeaturesComponent } from './item-features/item-features.component';
     ItemFeaturesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     HeadlineComponent,
