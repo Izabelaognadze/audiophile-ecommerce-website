@@ -9,4 +9,13 @@
   .common-margins {
     @apply mx-6 md:mx-10 lg:mx-auto max-w-[1110px];
   }
+  .responsive-images:nth-child(1) {
+    @apply block md:hidden;
+  }
+  .responsive-images:nth-child(2) {
+    @apply hidden md:block lg:hidden;
+  }
+  .responsive-images:nth-child(3) {
+    @apply hidden lg:block;
+  }
 }
