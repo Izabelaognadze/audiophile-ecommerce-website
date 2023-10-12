@@ -11,10 +11,10 @@
 </div>
 
 <!-- warning -->
-<div class="flex flex-col md:flex-row common-margins gap-[68px] md:gap-[10px] lg:gap-[30px] mt-10 mb-[120px] md:my-24 md:mb-[168px]">
-    <app-shop-button mainImg="assets/shared/desktop/image-category-thumbnail-headphones.png" title="HEADPHONES"></app-shop-button>
-    <app-shop-button mainImg="assets/shared/desktop/image-category-thumbnail-speakers.png" title="SPEAKERS"></app-shop-button>
-    <app-shop-button mainImg="assets/shared/desktop/image-category-thumbnail-earphones.png" title="EARPHONES"></app-shop-button>
+<div class="flex flex-col md:flex-row common-margins gap-[68px] md:gap-[10px] lg:gap-[30px] mt-[92px] mb-[120px] md:mt-[148px] md:mb-[168px] lg:mt-[200px] justify-between">
+    <app-shop-button routerLink="headphones" mainImg="assets/shared/desktop/image-category-thumbnail-headphones.png" title="HEADPHONES"></app-shop-button>
+    <app-shop-button routerLink="speakers" mainImg="assets/shared/desktop/image-category-thumbnail-speakers.png" title="SPEAKERS"></app-shop-button>
+    <app-shop-button routerLink="earphones" mainImg="assets/shared/desktop/image-category-thumbnail-earphones.png" title="EARPHONES"></app-shop-button>
 </div>
 <div class="relative overflow-hidden lg:gap-32 bg-clrDarkOrange text-white flex items-center flex-col lg:flex-row common-margins rounded-lg mt-[120px] md:mt-24 lg:mt-40 font-MainFont">
     <img src="assets/home/desktop/pattern-circles.svg" alt="" class="absolute scale-[173%] md:scale-110 md:-translate-y-72 lg:translate-y-40 lg:-translate-x-40">
@@ -24,14 +24,14 @@
     <div class="text-center lg:text-start max-w-[349px] lg:my-auto">
         <h2 class="text-4xl font-bold tracking-[1.286px] uppercase mt-8 mb-6 md:text-[56px] md:leading-[58px] md:tracking-[2px] md:mt-16 lg:mt-0 ">ZX9 SPEAKER</h2>
         <p class="">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-        <button class="bg-black text-white hover:bg-clrbgHover hover:cursor-pointer w-40 h-12 uppercase relative mt-6 mb-[55px] md:mt-10 md:mb-16 lg:mt-[55px] lg:mb-0">see product</button>
+        <a routerLink="speakers/zx9-speaker"><button class="bg-black text-white hover:bg-clrbgHover hover:cursor-pointer w-40 h-12 uppercase relative mt-6 mb-[55px] md:mt-10 md:mb-16 lg:mt-[55px] lg:mb-0">see product</button></a>
     </div>
 </div>
  
 <div class="common-margins rounded-lg my-6 md:my-8 lg:my-12 bg-cover font-MainFont bg-[url('/assets/home/mobile/image-speaker-zx7.jpg')] md:bg-[url('/assets/home/tablet/image-speaker-zx7.jpg')] lg:bg-[url('/assets/home/desktop/image-speaker-zx7.jpg')]">
     <div class="flex flex-col gap-8 py-[101px] pl-[50px] md:pl-[58px] lg:pl-[127px]">
         <h3 class="uppercase tracking-[2px] font-bold text-[28px]">ZX7 SPEAKER</h3>
-        <button class="uppercase border-[1px] border-black w-40 h-12 font-bold text-[13px] tracking-[1px] hover:bg-black hover:text-white">see product</button>
+        <a routerLink="speakers/zx7-speaker"><button class="uppercase border-[1px] border-black w-40 h-12 font-bold text-[13px] tracking-[1px] hover:bg-black hover:text-white">see product</button></a>
     </div>
 </div>
 
@@ -43,11 +43,10 @@
     </div>
     <div class="flex rounded-lg flex-col gap-8 justify-center pl-[50px] md:pl-[58px] lg:pl-[127px] bg-clrDarkGrey md:w-[50%] min-h-[200px]">
         <h3 class="uppercase tracking-[2px] font-bold text-[28px]">YX1 EARPHONES</h3>
-        <button class="uppercase border-[1px] border-black w-40 h-12 font-bold text-[13px] tracking-[1px] hover:bg-black hover:text-white">see product</button>
+        <a routerLink="earphones/yx1-earphones"><button class="uppercase border-[1px] border-black w-40 h-12 font-bold text-[13px] tracking-[1px] hover:bg-black hover:text-white">see product</button></a>
     </div>
 </div>
 
 
 <app-best-gear></app-best-gear>
 <app-footer></app-footer>
-<!-- <img src="../../../assets/shared/"  -translate-y-20 alt=""> -->

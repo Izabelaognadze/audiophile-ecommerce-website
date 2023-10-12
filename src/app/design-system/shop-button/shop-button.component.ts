@@ -9,4 +9,5 @@ export class ShopButtonComponent {
   @Input() public mainImg = "";
   @Input() public title = "";
   @Input() public productType = "";
+  @Input() public routerLink = "";
 }

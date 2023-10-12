@@ -1,9 +1,11 @@
-<div  class="bg-clrDarkGrey flex flex-col font-MainFont text-center rounded-lg">
-    <img  class="-translate-y-[30%] object-contain bg-cover max-h-44"  src={{mainImg}} alt="">
-    <div class="flex flex-col gap-[17px] lg:gap-[15px] -translate-y-[80%]">
-        <h3 class="text-lg font-bold tracking-widest uppercase">{{title}}</h3>
-        <p class="">shop</p>
+<a routerLink={{routerLink}}>
+    <div  class="bg-clrDarkGrey font-MainFont flex flex-col justify-end text-center rounded-lg h-[165px] lg:h-[204px] min-w-[200px] group">
+        <img  class="translate-y-[15%] object-contain bg-cover max-h-36 lg:max-h-40 lg:-translate-y-1"  src={{mainImg}} alt="">
+        <div class="flex flex-col gap-[17px] lg:gap-[15px] pb-[22px] lg:pb-[30px]">
+            <h3 class="text-lg font-bold tracking-widest uppercase">{{title}}</h3>
+            <p class="">shop</p>
+        </div>
     </div>
-</div>
+</a>
 
 <!-- [ngClass]="productType === 'headphones' ? 'bg-black text-white' : (productType === 'earphones' ? 'bg-white text-black' : 'bg-black text-white')" -->
