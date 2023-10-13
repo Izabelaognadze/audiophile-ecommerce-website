@@ -17,9 +17,10 @@ export class ItemChekoutComponent {
 
   @Input() public size = 0;
   @Output() public changedSize = new EventEmitter<number>();
-
+  outputMessage:number = 1;
   constructor(){
-    console.log(this.changedSize)
+    this.changedSize.emit(this.outputMessage);
+    console.log()
   }
   dec() {
     this.resize(-1)
