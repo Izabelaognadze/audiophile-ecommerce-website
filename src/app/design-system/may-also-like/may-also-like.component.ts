@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-may-also-like',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./may-also-like.component.css']
 })
 export class MayAlsoLikeComponent {
+  @Input() public img="";
+  @Input() public title="";
+  @Input() public linkTo="";
 
 }

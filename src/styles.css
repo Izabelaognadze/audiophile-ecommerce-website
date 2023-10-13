@@ -7,7 +7,7 @@
     @apply hover:text-clrDarkOrange cursor-pointer mx-auto md:mx-0 uppercase;
   }
   .common-margins {
-    @apply mx-6 md:mx-10 lg:mx-auto max-w-[1110px];
+    @apply mx-6 md:mx-10 lg:mx-16 xl:mx-auto max-w-[1110px];
   }
   .responsive-images img:nth-child(1) {
     @apply block md:hidden rounded-lg;
@@ -19,6 +19,9 @@
     @apply hidden lg:block rounded-lg;
   }
   .shop-button app-shop-button {
+    @apply md:w-[33%];
+  }
+  .may-also-like app-may-also-like {
     @apply md:w-[33%];
   }
 }
