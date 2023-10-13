@@ -9,6 +9,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ItemChekoutComponent } from './item-chekout/item-chekout.component';
 import { ItemFeaturesComponent } from './item-features/item-features.component';
 import { RouterModule } from '@angular/router';
+import { ItemInTheBoxComponent } from './item-in-the-box/item-in-the-box.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     MayAlsoLikeComponent,
     GalleryComponent,
     ItemChekoutComponent,
-    ItemFeaturesComponent
+    ItemFeaturesComponent,
+    ItemInTheBoxComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { RouterModule } from '@angular/router';
     MayAlsoLikeComponent,
     GalleryComponent,
     ItemChekoutComponent,
-    ItemFeaturesComponent
+    ItemFeaturesComponent,
+    ItemInTheBoxComponent,
   ]
 })
 export class DesignSystemModule { }

@@ -10,13 +10,13 @@
     @apply mx-6 md:mx-10 lg:mx-auto max-w-[1110px];
   }
   .responsive-images img:nth-child(1) {
-    @apply block md:hidden;
+    @apply block md:hidden rounded-lg;
   }
   .responsive-images img:nth-child(2) {
-    @apply hidden md:block lg:hidden;
+    @apply hidden md:block lg:hidden rounded-lg;
   }
   .responsive-images img:nth-child(3) {
-    @apply hidden lg:block;
+    @apply hidden lg:block rounded-lg;
   }
   .shop-button app-shop-button {
     @apply md:w-[33%];
