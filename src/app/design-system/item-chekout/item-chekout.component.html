@@ -2,9 +2,9 @@
     <a routerLink={{goBackLink}} class="opacity-50 leading-[25px] font-medium text-[15px] capitalize  mb-6 lg:mb-14">go back</a>
     <div class="flex flex-col md:flex-row gap-8 md:gap-[70px] lg:gap-[125px]">
         <div class="responsive-images">
-            <img src={{mobImg}} alt="" class="">
-            <img src={{tabImg}} alt="" class="">
-            <img src={{desImg}} alt="" class="">
+            <img src={{mobImg}} alt="">
+            <img src={{tabImg}} alt="">
+            <img src={{desImg}} alt="">
         </div>
         <div class="flex flex-col gap-6 md:gap-8 md:my-auto">
             <p [ngClass]="newProduct === 'new' ? 'block': 'hidden'" class="text-clrDarkOrange text-sm font-normal tracking-[10px] uppercase mb-6 md:mb-4 lg:-mb-4">NEW PRODUCT</p>
@@ -13,9 +13,9 @@
             <p class="font-bold uppercase tracking-[1.286px] text-lg">{{price}} + {{changedSize}}</p>
             <div class="mt-[7px] md:mt-0 lg:mt-[15px] flex flex-row gap-4">
                 <div class="bg-clrDarkGrey w-[120px] flex flex-row items-center px-[15.5px] justify-between">
-                    <button (click)="dec()">-</button>
-                    <span>{{size}}</span>
-                    <button (click)="inc()">+</button>
+                    <button (click)="dec()" class="hover:text-clrDarkOrange w-4 h-4 flex items-center">-</button>
+                    <span class="w-4">{{size}}</span>
+                    <button (click)="inc()" class="hover:text-clrDarkOrange w-4 h-4 flex items-center">+</button>
                 </div>
                 <a routerLink=""><button class="w-40 h-12 uppercase bg-clrDarkOrange hover:bg-clrLightOrange text-white font-bold tracking-[1px] text-[13px] mx-auto lg:mx-0">ADD TO CART</button></a>
             </div>

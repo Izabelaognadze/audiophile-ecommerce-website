@@ -1,4 +1,4 @@
-<div [ngClass]="white === 'white' ? '' : 'bg-black'" class=" font-MainFont">
+<div [ngClass]="white === 'white' ? '' : 'bg-black'" class="font-MainFont">
     <div class="flex flex-row text-white py-8 lg:py-9 justify-between common-margins">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="my-auto block hover:transition-all lg:hidden hover:animate-pulse" (click)="toggleOn =! toggleOn">
             <rect width="16" height="3" fill="white"/>
@@ -7,12 +7,12 @@
         </svg>
         <a routerLink="/"><img src="assets/shared/desktop/logo.svg" alt="audiophile logo"></a>
         <div class="hidden lg:flex gap-[34px] uppercase lg:-translate-x-[50px]">
-            <a class="hover:text-clrDarkOrange cursor-pointer" routerLink="/">Home</a>
+            <a class="hover:text-clrDarkOrange cursor-pointer active:bg-clrDarkOrange" routerLink="/">Home</a>
             <a class="hover:text-clrDarkOrange cursor-pointer" routerLink="/headphones">headphones</a>
             <a class="hover:text-clrDarkOrange cursor-pointer" routerLink="/speakers">speakers</a>
             <a class="hover:text-clrDarkOrange cursor-pointer" routerLink="/earphones">earphones</a>
         </div>
-        <img src="assets/shared/desktop/icon-cart.svg" alt="">
+        <img src="assets/shared/desktop/icon-cart.svg" alt="" class="">
     </div>
     <hr class="bg-white h-[1px] opacity-20 mx-auto w-full md:px-10 max-w-[1110px]">
     <div class="lg:hidden" *ngIf="toggleOn">
@@ -23,7 +23,3 @@
         </div>
     </div>
 </div>
-
-<!-- *ngIf="!toggleOn;ngIfThen 'bg-black' -->
-
-<!-- fixed top-0 left-0 w-[100%] -->
