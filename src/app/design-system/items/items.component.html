@@ -4,7 +4,7 @@
         <img src={{imgTab}} alt="tablet item picture" class="object-cover rounded-lg">
         <img src={{imgDesk}} alt="Desktop item picture" class="max-w-[540px] rounded-lg">
     </div>
-    <div class="flex flex-col lg:my-auto text-center lg:text-start">
+    <div class="flex flex-col lg:my-auto">
         <p [ngClass]="newProduct === 'new' ? 'block': 'hidden'" class="text-clrDarkOrange text-sm font-normal tracking-[10px] uppercase mb-6 md:mb-4">NEW PRODUCT</p>
         <h2 class="text-[28px] md:text-[40px] uppercase font-bold leading-normal tracking-[1px] md:leading-[44px] md:tracking-[1.429px]">{{title}}</h2>
         <p class="opacity-50 text-[15px] font-medium leading-[25px] max-w-2xl mx-auto my-6 md:mt-[52px] lg:mt-8 lg:mb-10">{{text}}</p>

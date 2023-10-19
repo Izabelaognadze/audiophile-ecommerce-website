@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
   @Input () public white=""; 
   toggleOn = false;
+  cardToggleOn = false;
 }
