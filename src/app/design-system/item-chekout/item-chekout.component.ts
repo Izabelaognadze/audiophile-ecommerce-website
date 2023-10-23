@@ -16,11 +16,11 @@ export class ItemChekoutComponent {
   @Input() public price = "";
 
   @Input() public size = 0;
-  @Output() public changedSize = new EventEmitter<number>();
+  @Output() public changedSize = new EventEmitter<number>;
   outputMessage:number = 1;
   constructor(){
     this.changedSize.emit(this.outputMessage);
-    console.log()
+    console.log(this.changedSize)
   }
   dec() {
     this.resize(-1)

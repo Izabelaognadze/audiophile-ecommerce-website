@@ -10,12 +10,12 @@
             <p [ngClass]="newProduct === 'new' ? 'block': 'hidden'" class="text-clrDarkOrange text-sm font-normal tracking-[10px] uppercase mb-6 md:mb-4 lg:-mb-4">NEW PRODUCT</p>
             <header class="text-[28px] font-bold tracking-[1px] uppercase md:leading-7 lg:text-[40px] lg:leading-[44px] lg:tracking-[1.429px]">{{header}}</header>
             <p class="opacity-50 text-[15px] font-medium leading-[25px]">{{paragraph}}</p>
-            <p class="font-bold uppercase tracking-[1.286px] text-lg">{{price}} + {{changedSize}}</p>
+            <p class="font-bold uppercase tracking-[1.286px] text-lg">{{price}}</p>
             <div class="mt-[7px] md:mt-0 lg:mt-[15px] flex flex-row gap-4">
-                <div class="bg-clrDarkGrey w-[120px] flex flex-row items-center px-[15.5px] justify-between">
-                    <button (click)="dec()" class="hover:text-clrDarkOrange w-4 h-4 flex items-center">-</button>
-                    <span class="w-4">{{size}}</span>
-                    <button (click)="inc()" class="hover:text-clrDarkOrange w-4 h-4 flex items-center">+</button>
+                <div class="bg-clrDarkGrey flex flex-row items-center">
+                    <button (click)="dec()" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">-</button>
+                    <span class="w-10 flex justify-center">{{size}}</span>
+                    <button (click)="inc()" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">+</button>
                 </div>
                 <a routerLink=""><button class="w-40 h-12 uppercase bg-clrDarkOrange hover:bg-clrLightOrange text-white font-bold tracking-[1px] text-[13px] mx-auto lg:mx-0">ADD TO CART</button></a>
             </div>
