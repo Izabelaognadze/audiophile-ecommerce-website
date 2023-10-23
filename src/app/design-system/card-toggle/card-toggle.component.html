@@ -1,0 +1,11 @@
+<div class="common-margins">
+    <div class="bg-white mt-6 lg:mt-8 rounded-lg flex flex-col w-[327px] mx-auto">
+        <div class="flex flex-row my-8 justify-between w-full">
+            <p class="text-lg font-bold leading-normal tracking-[1.286px] uppercase">card()</p>
+            <button class="text-[15px] font-medium leading-[25px] underline opacity-50">Remove all</button>
+        </div>
+        <div *ngFor="let item of cartItems;"
+        ></div>
+        <div *ngIf="cartItems.length === 0" class="text-black">The card is empty</div>
+    </div>
+</div>
