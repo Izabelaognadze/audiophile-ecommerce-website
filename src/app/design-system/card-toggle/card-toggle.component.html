@@ -1,11 +1,20 @@
-<div class="common-margins">
-    <div class="bg-white mt-6 lg:mt-8 rounded-lg flex flex-col w-[327px] mx-auto">
+<div class="common-margins font-MainFont">
+    <div class="bg-white mt-6 lg:mt-8 rounded-lg flex flex-col w-[327px] mx-auto px-8">
         <div class="flex flex-row my-8 justify-between w-full">
-            <p class="text-lg font-bold leading-normal tracking-[1.286px] uppercase">card()</p>
+            <p class="text-lg font-bold leading-normal tracking-[1.286px] uppercase">card({{cartItems.length}})</p>
             <button class="text-[15px] font-medium leading-[25px] underline opacity-50">Remove all</button>
         </div>
-        <div *ngFor="let item of cartItems;"
-        ></div>
-        <div *ngIf="cartItems.length === 0" class="text-black">The card is empty</div>
+
+        <div class="pb-8">
+            <div *ngFor="let item of cartItems;"
+            ></div>
+            <div *ngIf="cartItems.length === 0" class="font-normal text-start capitalize tracking-wider">The card is empty</div>
+        </div>
+
+        <div class="flex justify-between">
+            <p class="opacity-50 uppercase text-[15px] leading-[25px]">total</p>
+            <p class="bold uppercase text-lg leading-normal ">$ </p>
+        </div>
+        <button class="text-white text-center text-[13px] font-bold leading-normal tracking-[1px] uppercase bg-clrDarkOrange hover:bg-clrLightOrange py-[15px] mt-6 mb-8">checkout</button>
     </div>
 </div>
