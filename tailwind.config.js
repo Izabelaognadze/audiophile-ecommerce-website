@@ -14,6 +14,7 @@ module.exports = {
         'clrBg':'#0E0E0E',
         'clrbgHover':'#4C4C4C',
         'clrHomeBg' : '#191919',
+        'clrBorder' : '#CFCFCF'
       },
       fontFamily:{
         MainFont: "'Manrope', sans-serif",
