@@ -18,6 +18,7 @@ import { Xx59HeadphonesComponent } from './components/headphones/xx59-headphones
 import { Zx9SpeakerComponent } from './components/speakers/zx9-speaker/zx9-speaker.component';
 import { Zx7SpeakerComponent } from './components/speakers/zx7-speaker/zx7-speaker.component';
 import { Yx1EarphonesComponent } from './components/earphones/yx1-earphones/yx1-earphones.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { Yx1EarphonesComponent } from './components/earphones/yx1-earphones/yx1-
     Xx59HeadphonesComponent,
     Zx9SpeakerComponent,
     Zx7SpeakerComponent,
-    Yx1EarphonesComponent
+    Yx1EarphonesComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
