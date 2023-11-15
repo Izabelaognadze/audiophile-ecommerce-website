@@ -7,6 +7,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
+  selectedPaymentMethod: string = 'Yes';
+
+  updatePaymentMethod(value: string) {
+    this.selectedPaymentMethod = value;
+  }
+
   form = new FormGroup({
     name: new FormControl('', [
       Validators.pattern(/[A-Za-z ]{1,}/)
@@ -20,7 +26,7 @@ export class CheckoutComponent {
     eMoneyNumber : new FormControl('', Validators.pattern(/[0-9]{2,}/)),
     eMoneyPIN : new FormControl('', Validators.pattern(/[0-9]{2,}/)),
   })
-
+ 
   get name(){
     return this.form.get('name')
   }

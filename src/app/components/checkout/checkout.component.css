@@ -2,14 +2,26 @@ h3 {
   @apply text-clrDarkOrange text-[13px] uppercase font-bold leading-[25px] tracking-[0.929px] mb-4;
 }
 
-input {
+.input_info {
   @apply border-clrBorder border-2 rounded-lg border-solid mt-[9px] placeholder:text-sm pl-6 py-[14px] w-full active:border-clrDarkOrange;
 }
 
-label {
+.label_info {
   @apply text-[15px] font-bold capitalize tracking-[-0.214px];
 }
 
 .error {
   @apply text-red-500 text-xs tracking-[-0.214px] capitalize font-medium text-center;
+}
+
+.payment {
+  @apply flex border-2 border-clrBorder rounded-lg py-4 pl-5 gap-5;
+
+  input {
+    @apply h-4 my-auto w-auto;
+  }
+
+  label {
+    @apply text-sm font-bold tracking-[-0.25px];
+  }
 }
