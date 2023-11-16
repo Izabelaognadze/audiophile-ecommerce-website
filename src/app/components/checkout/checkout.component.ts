@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
-  selectedPaymentMethod: string = 'Yes';
+  selectedPaymentMethod : string = 'Yes';
 
   updatePaymentMethod(value: string) {
     this.selectedPaymentMethod = value;

@@ -13,7 +13,7 @@
                         <div class="flex flex-col md:flex-row gap-6 lg:gap-4">
                             <div class="w-full md:w-[49%]">
                                 <div class="flex flex-row justify-between">
-                                    <label class="label_info" for="name">Name</label>
+                                    <label class="label_info" [ngClass]="{'error_label': name?.invalid && (name?.touched || name?.dirty)}" for="name">Name</label>
                                     <div class="error" *ngIf="name?.invalid && (name?.touched || name?.dirty)">
                                         <span *ngIf="name?.errors?.['pattern']">Wrong format</span>
                                     </div>
@@ -22,7 +22,7 @@
                             </div>
                             <div class="w-full md:w-[49%]">
                                 <div class="flex flex-row justify-between">
-                                    <label class="label_info" for="email">Email Address</label>
+                                    <label class="label_info" [ngClass]="{'error_label': email?.invalid && (email?.touched || email?.dirty)}" for="email">Email Address</label>
                                     <div class="error" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
                                         <span *ngIf="email?.errors?.['email']">Wrong format</span>
                                     </div>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="w-full md:w-[49%]">
                             <div class="flex flex-row justify-between">
-                                <label class="label_info" for="phone">Phone Number</label>
+                                <label class="label_info" for="phone" [ngClass]="{'error_label': phone?.invalid && (phone?.touched || phone?.dirty)}">Phone Number</label>
                                 <div class="error" *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)">
                                     <span *ngIf="phone?.errors?.['pattern']">Wrong format</span>
                                 </div>
@@ -45,7 +45,7 @@
                         <h3>shipping info</h3>
                         <div class="w-full">
                             <div class="flex flex-row justify-between">
-                                <label class="label_info" for="address">Your Address</label>
+                                <label class="label_info" for="address" [ngClass]="{'error_label': address?.invalid && (address?.touched || address?.dirty)}">Your Address</label>
                                 <div class="error" *ngIf="address?.invalid && (address?.touched || address?.dirty)">
                                     <span *ngIf="address?.errors?.['minlength']">Wrong format</span>
                                 </div>
@@ -55,7 +55,7 @@
                         <div class="flex flex-col md:flex-row gap-6 lg:gap-4">
                             <div class="w-full md:w-[49%]">
                                 <div class="flex flex-row justify-between">
-                                    <label class="label_info" for="zip">ZIP Code</label>
+                                    <label class="label_info" for="zip" [ngClass]="{'error_label': zip?.invalid && (zip?.touched || zip?.dirty)}">ZIP Code</label>
                                     <div class="error" *ngIf="zip?.invalid && (zip?.touched || zip?.dirty)">
                                         <span *ngIf="zip?.errors?.['pattern']">Wrong format</span>
                                     </div>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="w-full md:w-[49%]">
                                 <div class="flex flex-row justify-between">
-                                    <label class="label_info" for="city">City</label>
+                                    <label class="label_info" for="city" [ngClass]="{'error_label': city?.invalid && (city?.touched || city?.dirty)}">City</label>
                                     <div class="error" *ngIf="city?.invalid && (city?.touched || city?.dirty)">
                                         <span *ngIf="city?.errors?.['pattern']">Wrong format</span>
                                     </div>
@@ -76,7 +76,7 @@
 
                         <div class="w-full md:w-[49%]">
                             <div class="flex flex-row justify-between">
-                                <label class="label_info" for="country">Country</label>
+                                <label class="label_info" for="country" [ngClass]="{'error_label': country?.invalid && (country?.touched || country?.dirty)}">Country</label>
                                 <div class="error" *ngIf="country?.invalid && (country?.touched || country?.dirty)">
                                     <span *ngIf="country?.errors?.['pattern']">Wrong format</span>
                                 </div>
@@ -103,7 +103,7 @@
                         <div class="flex flex-col md:flex-row gap-6 lg:gap-4 mt-8 md:mt-6" *ngIf="selectedPaymentMethod === 'Yes'">
                             <div class="w-full md:w-[49%]">
                                 <div class="flex flex-row justify-between">
-                                    <label class="label_info" for="eMoneyNumber">e-Money Number</label>
+                                    <label class="label_info" for="eMoneyNumber" [ngClass]="{'error_label': eMoneyNumber?.invalid && (eMoneyNumber?.touched || eMoneyNumber?.dirty)}">e-Money Number</label>
                                     <div class="error" *ngIf="eMoneyNumber?.invalid && (eMoneyNumber?.touched || eMoneyNumber?.dirty)">
                                         <span *ngIf="eMoneyNumber?.errors?.['pattern']">Wrong format</span>
                                     </div>
@@ -112,7 +112,7 @@
                             </div>
                             <div class="w-full md:w-[49%]">
                                 <div class="flex flex-row justify-between">
-                                    <label class="label_info" for="eMoneyPIN">e-Money PIN</label>
+                                    <label class="label_info" for="eMoneyPIN" [ngClass]="{'error_label': eMoneyPIN?.invalid && (eMoneyPIN?.touched || eMoneyPIN?.dirty)}">e-Money PIN</label>
                                     <div class="error" *ngIf="eMoneyPIN?.invalid && (eMoneyPIN?.touched || eMoneyPIN?.dirty)">
                                         <span *ngIf="eMoneyPIN?.errors?.['pattern']">Wrong format</span>
                                     </div>

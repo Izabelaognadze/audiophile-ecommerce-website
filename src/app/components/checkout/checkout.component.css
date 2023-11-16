@@ -14,11 +14,15 @@ h3 {
   @apply text-red-500 text-xs tracking-[-0.214px] capitalize font-medium text-center;
 }
 
+.error_label {
+  @apply text-red-500 text-[15px] font-bold capitalize tracking-[-0.214px];
+}
+
 .payment {
   @apply flex border-2 border-clrBorder rounded-lg py-4 pl-5 gap-5;
 
   input {
-    @apply h-4 my-auto w-auto;
+    @apply h-4 my-auto;
   }
 
   label {
