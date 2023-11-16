@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -54,4 +54,6 @@ export class CheckoutComponent {
   get eMoneyPIN(){
     return this.form.get('eMoneyPIN')
   }
+
+  
 }
