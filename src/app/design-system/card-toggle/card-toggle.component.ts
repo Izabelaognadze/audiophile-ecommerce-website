@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ItemsToBuy } from 'src/app/items-to-buy';
+import { ItemsToBuy } from 'src/app/shared/models/items-to-buy';
 
 @Component({
   selector: 'app-card-toggle',

@@ -3,7 +3,7 @@ h3 {
 }
 
 .input_info {
-  @apply border-clrBorder border-2 rounded-lg border-solid mt-[9px] placeholder:text-sm pl-6 py-[14px] w-full active:border-clrDarkOrange;
+  @apply border-clrBorder border-2 rounded-lg border-solid mt-[9px] placeholder:text-sm pl-6 py-[14px] w-full active:border-clrDarkOrange focus:border-clrDarkOrange focus:ring-clrDarkOrange focus:animate-shake;
 }
 
 .label_info {
