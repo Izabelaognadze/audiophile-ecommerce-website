@@ -27,25 +27,28 @@ describe('CartService', () => {
       imageUrl: 'string',
     });
   });
-  
+
   it('should add multiple products', () => {
-    service.productList$.subscribe((list) => {
-      expect(list).toEqual([
-        { id: 1, name: 'string', price: 'string', imageUrl: 'string' },
-        { id: 2, name: 'string2', price: 'string2', imageUrl: 'string2' },
-      ]);
-    });
     service.addProduct({
       id: 1,
       name: 'string',
       price: 'string',
       imageUrl: 'string',
     });
+    
     service.addProduct({
       id: 2,
       name: 'string2',
       price: 'string2',
       imageUrl: 'string2',
     });
+
+    service.productList$.subscribe((list) => {
+      expect(list).toEqual([
+        { id: 1, name: 'string', price: 'string', imageUrl: 'string' },
+        { id: 2, name: 'string2', price: 'string2', imageUrl: 'string2' },
+      ]);
+    });
+
   });
 });
