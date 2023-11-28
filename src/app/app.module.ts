@@ -36,7 +36,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     Zx9SpeakerComponent,
     Zx7SpeakerComponent,
     Yx1EarphonesComponent,
-    CheckoutComponent
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
