@@ -61,7 +61,7 @@ ng serve --open
 ### Second terminal:
 
 ```shell
-json-server --watch 
+json-server --watch .\api\db.json
 ```
 
 ## My process

@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.common-margins {
+  @apply mx-6 md:mx-10 lg:mx-16 xl:mx-auto max-w-[1110px];
+}
+
+.pages a {
+  @apply hover:text-clr-colors-darkOrange cursor-pointer mx-auto md:mx-0 uppercase;
+}
