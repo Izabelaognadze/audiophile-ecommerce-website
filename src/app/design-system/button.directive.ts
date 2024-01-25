@@ -1,21 +1,21 @@
 import { Directive, HostBinding, Input } from '@angular/core';
 import { clsx } from 'clsx';
 
-type ButtonType = 'Button1' | 'white' | 'black' | 'Button3' | 'Button4';
+type ButtonType = 'orange' | 'white' | 'black' | 'Button3' | 'Button4';
 
 @Directive({
   selector: '[appButton]',
   standalone: true,
 })
 export class ButtonDirective {
-  @Input() variant: ButtonType = 'Button1';
+  @Input() variant: ButtonType = 'orange';
 
   @HostBinding('class')
   get additionalClasses() {
     return clsx({
       '': true,
-      'bg-blue-500 hover:opacity-80 text-white font-bold py-2 px-4 border border-blue-700':
-        this.variant === 'Button1',
+      'text-white text-center text-[13px] font-bold leading-normal tracking-[1px] uppercase bg-clr-colors-darkOrange hover:bg-clr-colors-lightOrange py-[15px] mt-6 mb-8':
+        this.variant === 'orange',
       'uppercase border-[1px] border-black w-40 h-12 font-bold text-[13px] tracking-[1px] hover:bg-black hover:text-white':
         this.variant === 'white',
       'bg-black text-white hover:bg-clrbgHover hover:cursor-pointer hover:bg-[#4C4C4C] w-40 h-12 uppercase relative mt-6 mb-[55px] text-[13px] tracking-[1px] md:mt-10 md:mb-16 lg:mt-[55px] lg:mb-0':

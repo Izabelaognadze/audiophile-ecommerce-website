@@ -1,0 +1,32 @@
+<div class="bgclr">
+    <div class="common-margins font-MainFont relative z-50 flex justify-center sm:justify-end">
+        <div class="bg-white mt-6 lg:mt-8 rounded-lg flex flex-col w-[327px] mx-auto px-8 absolute l-[100%] b-0">
+            <div class="flex flex-row my-8 justify-between w-full">
+                <p class="text-lg font-bold leading-normal tracking-[1.286px] uppercase">cart({{cartItems.length}})</p>
+                <button class="text-[15px] font-medium leading-[25px] underline opacity-50" (click)="removeAll()">Remove all</button>
+            </div>
+    
+            <div class="pb-8 flex flex-col gap-6">
+                <div *ngFor="let item of cartItems;" class="flex flex-row justify-between">
+                    <img src={{item.desImg}} alt="" class="w-16 rounded-lg ">
+                    <div class="my-auto">
+                        <h1 class="font-bold leading-[25px] text-[15px]">{{item.shortName}}</h1>
+                        <p class=" text-[14px] font-bold opacity-50 leading-[25px]">$ {{item.price}}</p>
+                    </div>
+                    <div class="bg-clrDarkGrey flex flex-row items-center w-[96px] h-8 my-auto">
+                        <button (click)="dec()" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">-</button>
+                        <span class="w-10 flex justify-center text-black text-[13px] font-bold tracking-[1px] uppercase">{{item.amount}}</span>
+                        <button (click)="inc()" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">+</button>
+                    </div>
+                </div>
+                <div *ngIf="cartItems.length === 0" class="font-normal text-start capitalize tracking-wider">The card is empty</div>
+            </div>
+    
+            <div class="flex justify-between">
+                <p class="opacity-50 uppercase text-[15px] leading-[25px]">total</p>
+                <p class="font-bold uppercase text-lg leading-normal ">$ {{getTotal()}}</p>
+            </div>
+            <button routerLink="checkout" class="text-white text-center text-[13px] font-bold leading-normal tracking-[1px] uppercase bg-clr-colors-darkOrange hover:bg-clr-colors-lightOrange py-[15px] mt-6 mb-8">checkout</button>
+        </div>
+    </div>
+</div>
