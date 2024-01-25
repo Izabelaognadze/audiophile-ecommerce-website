@@ -19,6 +19,9 @@ module.exports = {
             border: "#CFCFCF",
           },
         }
+      },
+      fontFamily: {
+        MainFont: 'Manrope'
       }
     },
   },

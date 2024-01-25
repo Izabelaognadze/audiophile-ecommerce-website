@@ -10,3 +10,13 @@
 .pages a {
   @apply hover:text-clr-colors-darkOrange cursor-pointer mx-auto md:mx-0 uppercase;
 }
+
+.responsive-images img:nth-child(1) {
+  @apply block md:hidden rounded-lg;
+}
+.responsive-images img:nth-child(2) {
+  @apply hidden md:block lg:hidden rounded-lg;
+}
+.responsive-images img:nth-child(3) {
+  @apply hidden lg:block rounded-lg;
+}

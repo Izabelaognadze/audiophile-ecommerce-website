@@ -1,4 +1,4 @@
-# Audiophile E-commerce Website - Angular + TypeScript + Tailwind CSS
+# Audiophile E-commerce Website - Angular v17 + TypeScript + Tailwind CSS
 
 ![Audiophile E-commerce Website](./preview.jpg)
 
@@ -12,13 +12,6 @@ This is a solution to the [Audiophile E-commerce Website on Frontend Mentor](htt
   - [The challenge](#the-challenge)
   - [Links](#links)
 - [Start the app](#Start-the-app)
-  - [serve](#serve)
-  - [Expanding the ESLint configuration](#Expanding-the-ESLint-configuration)
-  - [Code scaffolding](#Code-scaffolding)
-  - [Build](#Build)
-  - [Running unit tests](#Running-unit-tests)
-  - [Running end-to-end tests](#Running-end-to-end-tests)
-  - [Further help](#Further-help)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
