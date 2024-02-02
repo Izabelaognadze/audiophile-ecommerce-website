@@ -14,16 +14,12 @@
         </div>
         <img src="assets/shared/desktop/icon-cart.svg" alt="" class="cursor-pointer" (click)="cardToggleOn=!cardToggleOn">
     </div>
-    <hr class="bg-white h-[1px] opacity-20 mx-auto w-full md:px-10 max-w-[1110px]">
-    <div class="lg:hidden" *ngIf="toggleOn">
-        <div class="flex px-6 z-50 md:px-10 shop flex-col absolute w-full md:flex-row pt-[84px] md:pt-[108px] pb-[35px] md:pb-[67px] gap-[68px] md:gap-[10px] lg:gap-[30px] mb-[120px] bg-white md:mb-[168px] justify-between">
-            <app-shop routerLink="/headphones" class="w-full" mainImg="assets/shared/desktop/image-category-thumbnail-headphones.png" title="HEADPHONES"></app-shop>
-            <app-shop routerLink="/speakers" class="w-full" mainImg="assets/shared/desktop/image-category-thumbnail-speakers.png" title="SPEAKERS"></app-shop>
-            <app-shop routerLink="/earphones" class="w-full" mainImg="assets/shared/desktop/image-category-thumbnail-earphones.png" title="EARPHONES"></app-shop> 
-        </div>
+    <hr class="bg-white h-[1px] opacity-20 mx-auto w-full md:px-10 max-w-[1110px] max-h-[100%]">
+    <div class="lg:hidden bg-black h-full bg-opacity-40 z-50 absolute top-[95px] left-0 right-0 bottom-0 " *ngIf="toggleOn">
+        <app-shop></app-shop>
     </div>
 
-    <div *ngIf="cardToggleOn"><!-- toFix remove! -->
+    <div *ngIf="cardToggleOn">
         <app-cart></app-cart>
     </div>
 </div>
