@@ -1,3 +1,6 @@
+<div class="" *ngFor="let i of product">
+    <a routerLink="/category/{{i.category}}">{{i.category}}</a>
+</div>
 <div [ngClass]="white === 'white' ? '' : 'bg-black'" class="font-MainFont">
     <div class="flex flex-row text-white py-8 lg:py-9 justify-between common-margins">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="my-auto block hover:transition-all lg:hidden hover:animate-pulse" (click)="toggleOn =! toggleOn">
@@ -8,7 +11,7 @@
         <a routerLink="/"><img src="assets/shared/desktop/logo.svg" alt="audiophile logo"></a>
         <div class="hidden lg:flex gap-[34px] uppercase lg:-translate-x-[50px]">
             <a class="hover:text-clr-colors-darkOrange cursor-pointer" routerLink="">Home</a>
-            <a class="hover:text-clr-colors-darkOrange cursor-pointer" routerLink="HEADPHONES">headphones</a>
+            <a class="hover:text-clr-colors-darkOrange cursor-pointer" [routerLink]="['/category/HEADPHONES']">headphones</a>
             <a class="hover:text-clr-colors-darkOrange cursor-pointer" routerLink="/SPEAKERS">speakers</a>
             <a class="hover:text-clr-colors-darkOrange cursor-pointer" routerLink="/earphones">earphones</a>
         </div>

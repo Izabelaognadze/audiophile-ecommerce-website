@@ -36,7 +36,7 @@ export class ProductComponent {
     private route: ActivatedRoute
   ) {
     this.route.params.subscribe((params) => {
-      this.productService.getProductByCategory(+params['id']).subscribe((d) => {
+      this.productService.getProductById(+params['id']).subscribe((d) => {
         this.product = [d];
       });
     });

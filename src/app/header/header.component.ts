@@ -3,6 +3,8 @@ import { CartComponent } from '../cart/cart.component';
 import { CommonModule } from '@angular/common';
 import { ShopComponent } from '../shop/shop.component';
 import { RouterLink } from '@angular/router';
+import { Product } from '../shared/models/product';
+import { ProductService } from '../shared/services/product.service';
 
 @Component({
   selector: 'app-header',
@@ -15,4 +17,12 @@ export class HeaderComponent {
   @Input() public white = '';
   toggleOn = false;
   cardToggleOn = false;
+
+  product: Product[] = [];
+
+  constructor(private ps: ProductService) {
+    this.ps.getProducts().subscribe((d) => {
+      this.product = d;
+    });
+  }
 }
