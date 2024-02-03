@@ -30,3 +30,8 @@ export enum Category {
   SPEAKERS,
   EARPHONES,
 }
+
+export interface CategoryList {
+  id: number;
+  category: string;
+}

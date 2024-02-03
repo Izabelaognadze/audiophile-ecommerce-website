@@ -78,9 +78,3 @@ Feel free to contact me.
 - Frontend Mentor - [Izabelaognadze](https://www.frontendmentor.io/profile/Izabelaognadze)
 - Facebook - [izabelaa21](https://www.facebook.com/izabelaa21)
 - Gmail - [isabella.ognadze@gmail.com](mailto:isabella.ognadze@gmail.com)
-
-## push an existing repository from the command line
-
-- git remote add origin https://github.com/Izabelaognadze/audiophile-ecommerce-website.git
-- git branch -M main
-- git push -u origin main
