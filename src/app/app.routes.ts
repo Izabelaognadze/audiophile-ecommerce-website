@@ -11,6 +11,7 @@ import { Zx9SpeakerComponent } from './speakers/zx9-speaker/zx9-speaker.componen
 import { Zx7SpeakerComponent } from './speakers/zx7-speaker/zx7-speaker.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ProductComponent } from './product/product.component';
 
 // export const routes: Routes = [
 //   {
@@ -71,7 +72,11 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: ':id',
+    path: 'category/:category',
     component: CategoriesComponent,
+  },
+  {
+    path: 'product/:id',
+    component: ProductComponent,
   },
 ];

@@ -21,6 +21,8 @@ export interface Product {
   galleryDesImg1: string;
   galleryDesImg2: string;
   galleryDesImg3: string;
+  featuresStart: string;
+  featuresEnd: string;
 }
 
 export enum Category {

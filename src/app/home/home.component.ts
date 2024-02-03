@@ -5,6 +5,7 @@ import { BestGearComponent } from '../best-gear/best-gear.component';
 import { ButtonDirective } from '../design-system/button.directive';
 import { HeaderComponent } from '../header/header.component';
 import { ShopComponent } from '../shop/shop.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import { ShopComponent } from '../shop/shop.component';
     ButtonDirective,
     HeaderComponent,
     ShopComponent,
+    RouterModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

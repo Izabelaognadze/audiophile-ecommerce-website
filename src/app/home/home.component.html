@@ -4,7 +4,7 @@
         <p class="text-white opacity-50 text-sm font-normal tracking-[10px] uppercase mb-4 md:mb-6">NEW PRODUCT</p>
         <h1 class="text-4xl md:text-[56px] text-white uppercase font-bold leading-10 md:leading-[58px] tracking-[1.286px] md:tracking-[2px] md:max-w-[400px] md:mx-auto lg:mx-0">XX99 Mark II HeadphoneS</h1>
         <p class="text-white mt-6 mb-7 md:mb-10 opacity-75 font-medium text-[15px] md:max-w-[400px] md:mx-auto lg:mx-0">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-        <a routerLink=""><button appButton="orange" class="w-40 ">see product</button></a>
+        <button [routerLink]="['/product/1']" appButton="orange" class="w-40 ">see product</button>
     </div>  <!-- toFix routerLink -->
 </div>
 
@@ -31,14 +31,14 @@
     <div class="text-center lg:text-start max-w-[349px] lg:my-auto">
         <h2 class="text-4xl font-bold tracking-[1.286px] uppercase mt-8 mb-6 md:text-[56px] md:leading-[58px] md:tracking-[2px] md:mt-16 lg:mt-0 ">ZX9 SPEAKER</h2>
         <p class="">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-        <a routerLink="speakers/zx9-speaker"><button appButton variant="black">see product</button></a> <!-- toFix -->
+        <button [routerLink]="['/product/4']" appButton variant="black">see product</button>
     </div>
 </div>
  
 <div class="common-margins rounded-lg my-6 md:my-8 lg:my-12 bg-cover font-MainFont bg-[url('/assets/home/mobile/image-speaker-zx7.jpg')] md:bg-[url('/assets/home/tablet/image-speaker-zx7.jpg')] lg:bg-[url('/assets/home/desktop/image-speaker-zx7.jpg')]">
     <div class="flex flex-col gap-8 py-[101px] pl-[50px] md:pl-[58px] lg:pl-[127px]">
         <h3 class="uppercase tracking-[2px] font-bold text-[28px]">ZX7 SPEAKER</h3>
-        <a routerLink="speakers/zx7-speaker"><button appButton variant="white">see product</button></a> <!-- toFix -->
+        <button [routerLink]="['/product/5']" appButton variant="white">see product</button>
     </div>
 </div>
 
@@ -50,7 +50,7 @@
     </div>
     <div class="flex rounded-lg flex-col gap-8 justify-center pl-[50px] md:pl-[58px] lg:pl-[127px] bg-clr-colors-darkGrey md:w-[50%] min-h-[200px]">
         <h3 class="uppercase tracking-[2px] font-bold text-[28px]">YX1 EARPHONES</h3>
-        <a routerLink="earphones/yx1-earphones"><button appButton variant="white">see product</button></a> <!-- toFix -->
+        <button [routerLink]="['/product/6']" appButton variant="white">see product</button>
     </div>
 </div>
 

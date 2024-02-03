@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div class="common-margins" *ngFor="let i of product">
+    <div class="mt-4 md:mt-8 lg:mt-20 font-MainFont flex flex-col mb-[88px] md:mb-[120px] lg:mb-40">
+        <a routerLink={{i.category}} class="opacity-50 leading-[25px] font-medium text-[15px] capitalize mb-6 lg:mb-14">go back</a>
+        <div class="flex flex-col md:flex-row gap-8 md:gap-[70px] lg:gap-[125px]">
+            <div class="responsive-images">
+                <img src={{i.mobileImg}} alt="">
+                <img src={{i.tabletImg}} alt="">
+                <img src={{i.desktopImg}} alt="">
+            </div>
+            <div class="flex flex-col gap-6 md:gap-8 md:my-auto">
+                <p *ngIf="i.new"  class="text-clr-colors-darkOrange text-sm font-normal tracking-[10px] uppercase mb-6 md:mb-4 lg:-mb-4">NEW PRODUCT</p>
+                <header class="text-[28px] font-bold tracking-[1px] uppercase md:leading-7 lg:text-[40px] lg:leading-[44px] lg:tracking-[1.429px]">{{i.name}}</header>
+                <p class="opacity-50 text-[15px] font-medium leading-[25px]">{{i.description}}</p>
+                <p class="font-bold uppercase tracking-[1.286px] text-lg">$ {{i.price | number:'1.0-0'}}</p>
+                <div class="mt-[7px] md:mt-0 lg:mt-[15px] flex flex-row gap-4">
+                    <div class="bg-clr-colors-darkGrey flex flex-row items-center">
+                        <button (click)="dec()" class="hover:text-clr-colors-darkOrange flex w-10 justify-center items-center h-full">-</button>
+                        <span class="w-10 flex justify-center">{{size}}</span>
+                        <button (click)="inc()" class="hover:text-clr-colors-darkOrange flex w-10 justify-center items-center h-full">+</button>
+                    </div>
+                    <a routerLink=""><!-- toFix -->
+                        <button class="w-40 h-12 uppercase bg-clr-colors-darkOrange hover:bg-clr-colors-lightOrange text-white font-bold tracking-[1px] text-[13px] mx-auto lg:mx-0">ADD TO CART</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-[88px] md:gap-[120px] lg:gap-[125px]">
+        <div class="flex flex-col font-MainFont">
+            <h3 class="uppercase text-2xl font-bold leading-9 tracking-[0.857px] md:text-[32px] md:tracking-[1.143px] mb-6 md:mb-8">FEATURES</h3>
+            <div class="opacity-50 text-[15px] font-medium leading-[25px]">
+                <p class="mb-6">{{i.featuresStart}}</p>
+                <p>{{i.featuresEnd}}</p>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row lg:flex-col gap-6 md:gap-[11px] lg:gap-8">
+            <h2 class="text-2xl font-MainFont font-bold leading-[36px] tracking-[0.857px] lg:w-[225px] uppercase text-black md:w-[339px]">in the box</h2>
+            <div class="gap-2">
+            </div>
+        </div>
+    </div>
+
+    <div class=" flex flex-col md:flex-row-reverse w-full gap-5 md:gap-[18px] lg:gap-[30px] mb-[120px] mt-[88px] md:mt-[120px] lg:my-40">
+        <div class="flex flex-col md:h-full gap-5 md:gap-[18px] lg:gap-[30px]">
+            <div class="responsive-images">
+                <img src={{i.galleryMobImg1}} alt="">
+                <img src={{i.galleryTabImg1}} alt="">
+                <img src={{i.galleryDesImg1}} alt="">
+            </div>
+    
+            <div class="responsive-images">
+                <img src={{i.galleryMobImg1}} alt="">
+                <img src={{i.galleryTabImg2}} alt="">
+                <img src={{i.galleryDesImg2}} alt="">
+            </div>
+        </div>
+    
+    
+        <div class="responsive-images">
+            <img src={{i.galleryMobImg3}} alt="">
+            <img src={{i.galleryTabImg3}} alt="">
+            <img src={{i.galleryDesImg3}} alt="">
+        </div>
+    </div>
+    
+</div>
+<app-best-gear></app-best-gear>
+<app-footer></app-footer>
