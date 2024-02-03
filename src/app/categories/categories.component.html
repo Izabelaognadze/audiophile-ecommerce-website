@@ -1,1 +1,20 @@
-<div class="" *ngFor="let i of product">{{i.category}}</div>
+<app-header></app-header>
+<h1 class="bg-black text-white text-center text-[28px] md:text-[40px] uppercase font-bold leading-normal md:leading-[44px] tracking-[2px] md:tracking-[1.429px] py-8 md:pt-[105px] md:pb-[97px] lg:pt-[98px] font-MainFont">{{product[0].category}}</h1>
+
+<div class="common-margins flex flex-col gap-[120px] lg:gap-40 mt-16 mb-[120px] md:my-[120px] lg:my-40" *ngFor="let i of product">
+    <div [ngClass]="i.reversed ? 'lg:flex-row-reverse':'lg:flex-row'" class="flex flex-col common-margins gap-8 md:gap-[52px] lg:gap-[125px] font-MainFont">
+        <div class="responsive-images">
+            <img src={{i.mobileImg}} alt="mobile item picture" class="object-cover rounded-lg">
+            <img src={{i.tabletImg}} alt="tablet item picture" class="object-cover rounded-lg">
+            <img src={{i.desktopImg}} alt="Desktop item picture" class="max-w-[540px] rounded-lg">
+        </div>
+        <div class="flex flex-col lg:my-auto">
+            <p [ngClass]="i.new ? 'block' : 'hidden'"  class="text-clr-colors-darkOrange text-sm font-normal tracking-[10px] uppercase mb-6 md:mb-4">NEW PRODUCT</p>
+            <h2 class="text-[28px] md:text-[40px] uppercase font-bold leading-normal tracking-[1px] md:leading-[44px] md:tracking-[1.429px]">{{i.name}}</h2>
+            <p class="opacity-50 text-[15px] font-medium leading-[25px] max-w-2xl mx-auto my-6 md:mt-[52px] lg:mt-8 lg:mb-10">{{i.description}}</p>
+            <button [routerLink]="['/product', i.id]" class="w-40 h-12 uppercase bg-clr-colors-darkOrange hover:bg-clr-colors-lightOrange text-white font-bold tracking-[1px] text-[13px] mx-auto lg:mx-0">see product</button>
+        </div>
+    </div>
+</div>
+<app-best-gear></app-best-gear>
+<app-footer></app-footer>

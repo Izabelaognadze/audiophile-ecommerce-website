@@ -17,12 +17,4 @@ export class HeaderComponent {
   @Input() public white = '';
   toggleOn = false;
   cardToggleOn = false;
-
-  product: Product[] = [];
-
-  constructor(private ps: ProductService) {
-    this.ps.getProducts().subscribe((d) => {
-      this.product = d;
-    });
-  }
 }
