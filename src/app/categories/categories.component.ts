@@ -1,35 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from '../shared/models/product';
 import { ProductService } from '../shared/services/product.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-categories',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, HttpClientModule, RouterModule],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css',
 })
-export class CategoriesComponent implements OnInit {
-  product!: Product;
-  productID!: string | null;
-
-  ngOnInit(): void {
-    this.productID = this.route.snapshot.paramMap.get('id');
-    console.log(this.productID);
-  }
+export class CategoriesComponent {
+  product: Product[] = [];
 
   constructor(
-    private productService: ProductService,
-    private route: ActivatedRoute
+    activatedRoute: ActivatedRoute,
+    private productService: ProductService
   ) {
-    // this.route.params.subscribe((params) => {
-    //   const category = params['category'];
-    //   this.productService
-    //     .getProductByCategory(category)
-    //     .subscribe((product) => {
-    //       this.product = product;
-    //     });
-    // });
+    const id = Number(activatedRoute.snapshot.params['id']);
+
+    this.productService.getProductByCategory(id).subscribe((d) => {
+      this.product = d;
+    });
   }
+
+  // constructor(
+  //   public productService: ProductService,
+  //   private route: ActivatedRoute
+  // ) {
+  //   this.route.params.subscribe((params) => {
+  //     this.productService
+  //       .getProductByCategory(params['category'])
+  //       .subscribe((d) => {
+  //         this.product = d;
+  //         console.log(this.product);
+  //       });
+  //   });
+  // }
 }

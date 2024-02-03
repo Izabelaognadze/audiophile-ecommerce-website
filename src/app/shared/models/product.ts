@@ -1,6 +1,6 @@
 export interface Product {
   id: number;
-  category: string;
+  category: Category;
   name: string;
   shortName: string;
   price: number;
@@ -21,4 +21,10 @@ export interface Product {
   galleryDesImg1: string;
   galleryDesImg2: string;
   galleryDesImg3: string;
+}
+
+export enum Category {
+  HEADPHONES,
+  SPEAKERS,
+  EARPHONES,
 }

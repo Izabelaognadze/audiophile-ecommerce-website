@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product } from '../models/product';
+import { Category, Product } from '../models/product';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,13 +9,12 @@ import { Observable } from 'rxjs';
 export class ProductService {
   url = 'http://localhost:3000/products';
 
-  getAllProducts(): Observable<Product[]> {
+  getProducts() {
     return this.http.get<Product[]>(this.url);
   }
 
-  getProductByCategory(category: string) {
-    const productUrl = `${this.url}/${category}`;
-    return this.http.get<Product>(productUrl);
+  getProductByCategory(id: number) {
+    return this.http.get<Product[]>(`${this.url}/${id}`);
   }
 
   constructor(private http: HttpClient) {}
