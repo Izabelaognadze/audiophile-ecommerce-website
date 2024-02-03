@@ -5,7 +5,7 @@
             <img class="w-[143px] mx-auto md:mx-0" src="assets/shared/desktop/logo.svg" alt="audiophile logo">
             <div class="flex flex-col md:flex-row pages gap-4 md:gap-8 lg:gap-[34px] my-12 md:my-8 lg:my-0 text-[13px] font-bold leading-[25px] tracking-[2px]">
                 <a routerLink="/">Home</a>
-                <a routerLink="/headphones" routerLinkActive="active">headphones</a>
+                <a routerLink="/HEADPHONES" routerLinkActive="active">HEADPHONES</a>
                 <a routerLink="/speakers">speakers</a>
                 <a routerLink="/earphones">earphones</a>
             </div>
@@ -50,4 +50,6 @@
         </div>
     </div>
 </div>
-<div class="" *ngFor="let i of products"> <td> <a routerLink="{{i.id}}">{{i.name}}</a> </td></div>
+<div *ngFor="let i of products"> 
+    <a routerLink="{{i.id}}">{{i.id}}</a> 
+</div>

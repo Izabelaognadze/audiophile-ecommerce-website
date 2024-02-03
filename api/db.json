@@ -2,7 +2,7 @@
     "products" : [
         {
             "id" : 1,
-            "category" : "headphones",
+            "category" : "HEADPHONES",
             "categoryImg" : "assets/shared/desktop/image-category-thumbnail-headphones.png",
             "name" : "XX99 MARK II HEADPHONES",
             "shortName" : "XX99 MK II",
@@ -27,7 +27,7 @@
         },
         {
             "id" : 2,
-            "category" : "headphones",
+            "category" : "HEADPHONES",
             "categoryImg" : "assets/shared/desktop/image-category-thumbnail-headphones.png",
             "name" : "XX99 MARK I HEADPHONES",
             "shortName" : "XX99 MK I",
@@ -52,7 +52,7 @@
         },
         {
             "id" : 3,
-            "category" : "headphones",
+            "category" : "HEADPHONES",
             "categoryImg" : "assets/shared/desktop/image-category-thumbnail-headphones.png",
             "name" : "XX59 HEADPHONES",
             "shortName" : "XX59",
@@ -77,7 +77,7 @@
         },
         {
             "id" : 4,
-            "category" : "speakers",
+            "category" : "SPEAKERS",
             "categoryImg" : "assets/shared/desktop/image-category-thumbnail-speakers.png",
             "name" : "ZX9 SPEAKER",
             "shortName" : "ZX9",
@@ -102,7 +102,7 @@
         },
         {
             "id" : 5,
-            "category" : "speakers",
+            "category" : "SPEAKERS",
             "categoryImg" : "assets/shared/desktop/image-category-thumbnail-speakers.png",
             "name" : "ZX7 SPEAKER",
             "shortName" : "ZX7",
@@ -127,7 +127,7 @@
         },
         {
             "id" : 6,
-            "category" : "earphones",
+            "category" : "EARPHONES",
             "categoryImg" : "assets/shared/desktop/image-category-thumbnail-earphones.png",
             "name" : "YX1 WIRELESS EARPHONES",
             "shortName" : "YX1",

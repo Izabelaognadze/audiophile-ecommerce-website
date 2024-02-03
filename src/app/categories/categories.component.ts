@@ -16,27 +16,13 @@ export class CategoriesComponent {
   product: Product[] = [];
 
   constructor(
-    activatedRoute: ActivatedRoute,
-    private productService: ProductService
+    public productService: ProductService,
+    private route: ActivatedRoute
   ) {
-    const id = Number(activatedRoute.snapshot.params['id']);
-
-    this.productService.getProductByCategory(id).subscribe((d) => {
-      this.product = d;
+    this.route.params.subscribe((params) => {
+      this.productService.getProductByCategory(+params['id']).subscribe((d) => {
+        this.product = [d];
+      });
     });
   }
-
-  // constructor(
-  //   public productService: ProductService,
-  //   private route: ActivatedRoute
-  // ) {
-  //   this.route.params.subscribe((params) => {
-  //     this.productService
-  //       .getProductByCategory(params['category'])
-  //       .subscribe((d) => {
-  //         this.product = d;
-  //         console.log(this.product);
-  //       });
-  //   });
-  // }
 }
