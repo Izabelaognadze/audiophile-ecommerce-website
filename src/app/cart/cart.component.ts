@@ -3,11 +3,12 @@ import { Product } from '../shared/models/product';
 import { CommonModule } from '@angular/common';
 import { ButtonDirective } from '../design-system/button.directive';
 import { ProductService } from '../shared/services/product.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, ButtonDirective],
+  imports: [CommonModule, ButtonDirective, RouterModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
 })

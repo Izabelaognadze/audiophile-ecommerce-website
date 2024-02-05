@@ -1,1 +1,165 @@
-<p>checkout works!</p>
+<app-header></app-header>
+
+<div class="bg-clr-colors-lightGrey font-MainFont">
+    <div class="flex flex-col pt-4 md:pt-12 lg:pt-20 pb-24 md:pb-28 lg:pb-[141px] common-margins">
+        <p routerLink=".." class="pb-6 opacity-50 hover:opacity-100 hover:cursor-pointer lg:pb-[38px] capitalize hover:text-clr-colors-darkGrey">go back</p>
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap[30px]">
+            <div class="bg-white pt-6 px-6 pb-8 rounded-lg md:py-[30px] md:px-7 lg:px-12 lg:pt-[54px] lg:pb-12 w-full">
+                <h2 class="text-[28px] font-bold tracking-[1px] uppercase md:text-[32px] md:leading-[36px] md:tracking-[1.143px] mb-8 md:mb-10">CHECKOUT</h2>
+                <form action="" [formGroup]="form">
+                    <div class="flex flex-col gap-6">
+                        <h3>Billing details</h3>
+                        <div class="flex flex-col md:flex-row gap-6 lg:gap-4">
+                            <div class="w-full md:w-[49%]">
+                                <div class="flex flex-row justify-between">
+                                    <label class="label_info" [ngClass]="{'error_label': name?.invalid && (name?.touched || name?.dirty)}" for="name">Name</label>
+                                    <div class="error" *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+                                        <span *ngIf="name?.errors?.['pattern']">Wrong format</span>
+                                    </div>
+                                </div>
+                                <input class="input_info" type="text" placeholder="Alexei Ward" formControlName="name">
+                            </div>
+                            <div class="w-full md:w-[49%]">
+                                <div class="flex flex-row justify-between">
+                                    <label class="label_info" [ngClass]="{'error_label': email?.invalid && (email?.touched || email?.dirty)}" for="email">Email Address</label>
+                                    <div class="error" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+                                        <span *ngIf="email?.errors?.['email']">Wrong format</span>
+                                    </div>
+                                </div>
+                                <input class="input_info" type="text" placeholder="alexei@mail.com" formControlName="email">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[49%]">
+                            <div class="flex flex-row justify-between">
+                                <label class="label_info" for="phone" [ngClass]="{'error_label': phone?.invalid && (phone?.touched || phone?.dirty)}">Phone Number</label>
+                                <div class="error" *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)">
+                                    <span *ngIf="phone?.errors?.['pattern']">Wrong format</span>
+                                </div>
+                            </div>
+                            <input class="input_info" type="text" placeholder="+1 202-555-0136" formControlName="phone">
+                        </div>
+                    </div>
+
+                    <div class="my-8 md:mt-[53px] md:mb-[61px] flex flex-col gap-6">
+                        <h3>shipping info</h3>
+                        <div class="w-full">
+                            <div class="flex flex-row justify-between">
+                                <label class="label_info" for="address" [ngClass]="{'error_label': address?.invalid && (address?.touched || address?.dirty)}">Your Address</label>
+                                <div class="error" *ngIf="address?.invalid && (address?.touched || address?.dirty)">
+                                    <span *ngIf="address?.errors?.['minlength']">Wrong format</span>
+                                </div>
+                            </div>
+                            <input class="input_info" type="text" placeholder="1137 Williams Avenue" formControlName="address">
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 lg:gap-4">
+                            <div class="w-full md:w-[49%]">
+                                <div class="flex flex-row justify-between">
+                                    <label class="label_info" for="zip" [ngClass]="{'error_label': zip?.invalid && (zip?.touched || zip?.dirty)}">ZIP Code</label>
+                                    <div class="error" *ngIf="zip?.invalid && (zip?.touched || zip?.dirty)">
+                                        <span *ngIf="zip?.errors?.['pattern']">Wrong format</span>
+                                    </div>
+                                </div>
+                                <input class="input_info" type="text" placeholder="10001" formControlName="zip">
+                                <div class=""></div>
+                            </div>
+                            <div class="w-full md:w-[49%]">
+                                <div class="flex flex-row justify-between">
+                                    <label class="label_info" for="city" [ngClass]="{'error_label': city?.invalid && (city?.touched || city?.dirty)}">City</label>
+                                    <div class="error" *ngIf="city?.invalid && (city?.touched || city?.dirty)">
+                                        <span *ngIf="city?.errors?.['pattern']">Wrong format</span>
+                                    </div>
+                                </div>
+                                <input class="input_info" type="text" placeholder="New York" formControlName="city">
+                            </div>
+                        </div>
+
+                        <div class="w-full md:w-[49%]">
+                            <div class="flex flex-row justify-between">
+                                <label class="label_info" for="country" [ngClass]="{'error_label': country?.invalid && (country?.touched || country?.dirty)}">Country</label>
+                                <div class="error" *ngIf="country?.invalid && (country?.touched || country?.dirty)">
+                                    <span *ngIf="country?.errors?.['pattern']">Wrong format</span>
+                                </div>
+                            </div>
+                            <input class="input_info" type="text" placeholder="United States" formControlName="country">
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <h3>payment details</h3>
+                        <div class="flex flex-col md:flex-row md:justify-between">
+                            <p class="w-full md:w-[49%] text-xs font-bold tracking-[-0.214px] mb-[17px] md:mb-0">Payment Method</p>
+                            <div class="w-full md:w-[49%] gap-4 flex flex-col">
+                                <div class="payment">
+                                    <input type="radio" value="Yes" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(true)">
+                                    <label for="e-Money">e-Money</label>
+                                </div>
+                                <div class="payment">
+                                    <input type="radio" value="No" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(true)">
+                                    <label for="Cash">Cash on Delivery</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 lg:gap-4 mt-8 md:mt-6" *ngIf="selectedPaymentMethod === true">
+                            <div class="w-full md:w-[49%]">
+                                <div class="flex flex-row justify-between">
+                                    <label class="label_info" for="eMoneyNumber" [ngClass]="{'error_label': eMoneyNumber?.invalid && (eMoneyNumber?.touched || eMoneyNumber?.dirty)}">e-Money Number</label>
+                                    <div class="error" *ngIf="eMoneyNumber?.invalid && (eMoneyNumber?.touched || eMoneyNumber?.dirty)">
+                                        <span *ngIf="eMoneyNumber?.errors?.['pattern']">Wrong format</span>
+                                    </div>
+                                </div>
+                                <input class="input_info" type="text" placeholder="238521993" formControlName="eMoneyNumber">
+                            </div>
+                            <div class="w-full md:w-[49%]">
+                                <div class="flex flex-row justify-between">
+                                    <label class="label_info" for="eMoneyPIN" [ngClass]="{'error_label': eMoneyPIN?.invalid && (eMoneyPIN?.touched || eMoneyPIN?.dirty)}">e-Money PIN</label>
+                                    <div class="error" *ngIf="eMoneyPIN?.invalid && (eMoneyPIN?.touched || eMoneyPIN?.dirty)">
+                                        <span *ngIf="eMoneyPIN?.errors?.['pattern']">Wrong format</span>
+                                    </div>
+                                </div>
+                                <input class="input_info" type="text" placeholder="6891" formControlName="eMoneyPIN">
+                            </div>
+                        </div>
+                        <div class="mt-8 md:mt-[30px] flex flex-row gap-8" *ngIf="selectedPaymentMethod === false">
+                            <img src="/assets/shared/desktop/Shape.svg" alt="" class="w-12 h-12">
+                            <p class="opacity-50 text-[15px] font-medium leading-[25px]">The &apos;Cash on Delivery&apos; option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="w-full lg:w-[400px] bg-white rounded-lg py-8 px-6 md:px-[33px]">
+                <h1 class="text-lg font-bold tracking-[1.286px] uppercase mb-[31px]">summary</h1>
+                <div class="flex flex-row justify-between mb-6" *ngFor="let i of products">
+                    <div class="flex gap-5">
+                        <img src={{i.genericImg}} alt="" class="w-16 rounded-lg ">
+                        <div class="my-auto">
+                            <h1 class="font-bold leading-[25px] text-[15px]">{{i.shortName}}</h1>
+                            <p class=" text-[14px] font-bold opacity-50 leading-[25px]">$ {{i.price | number : '1.2-2'}}</p>
+                        </div>
+                    </div>
+                    <p class="items-center text-sm h-8 my-auto text-clr-colors-bgHover">x{{i.amount}}</p>
+                </div>
+                <div class="">
+                    <h2 class="">TOTAL</h2>
+                    <p class="">$ </p>
+                </div>
+
+                <div class="">
+                    <h2 class=""></h2>
+                    <p class=""></p>
+                </div>
+
+                <div class="">
+                    <h3 class=""></h3>
+                    <p class=""></p>
+                </div>
+
+                <div class="">
+                    <h3 class=""></h3>
+                    <p class=""></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
