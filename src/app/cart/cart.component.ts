@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Category, Product } from '../shared/models/product';
 import { CommonModule } from '@angular/common';
 import { ButtonDirective } from '../design-system/button.directive';
+import { ProductService } from '../shared/services/product.service';
 
 @Component({
   selector: 'app-cart',
@@ -11,10 +12,16 @@ import { ButtonDirective } from '../design-system/button.directive';
   styleUrl: './cart.component.css',
 })
 export class CartComponent {
-  cartItems: Product[] = [];
+  products: Product[] = [];
   @Input() public size = 0;
   @Output() public changedSize = new EventEmitter<number>();
   outputMessage: number = 1;
+
+  constructor(private productService: ProductService) {
+    this.productService.getProducts().subscribe((d) => {
+      this.products = d.filter((i) => i.amount > 0);
+    });
+  }
 
   dec() {
     this.resize(-1);
@@ -30,12 +37,12 @@ export class CartComponent {
   }
 
   removeAll() {
-    this.cartItems = [];
+    this.products = [];
   }
 
   getTotal(): number {
-    return this.cartItems.reduce(
-      (sum, item) => sum + item.price * item.amount,
+    return this.products.reduce(
+      (sum, item) => (sum + item.price * item.amount) * 1.2 + 50,
       0
     );
   }

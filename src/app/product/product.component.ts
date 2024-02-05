@@ -1,7 +1,12 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../shared/models/product';
 import { ProductService } from '../shared/services/product.service';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterModule,
+} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from '../header/header.component';
@@ -26,14 +31,15 @@ import { ButtonDirective } from '../design-system/button.directive';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
   product: Product[] = [];
   @Input() public size = 0;
   @Output() public changedSize = new EventEmitter<number>();
 
   constructor(
     public productService: ProductService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {
     this.route.params.subscribe((params) => {
       this.productService.getProductById(+params['id']).subscribe((d) => {
@@ -57,5 +63,13 @@ export class ProductComponent {
   resize(delta: number) {
     this.size = Math.min(100, Math.max(0, +this.size + delta));
     this.changedSize.emit(this.size);
+  }
+
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 }

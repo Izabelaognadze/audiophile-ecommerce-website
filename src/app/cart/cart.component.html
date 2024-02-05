@@ -2,12 +2,12 @@
     <div class="common-margins font-MainFont relative z-50 flex justify-center sm:justify-end">
         <div class="bg-white mt-6 lg:mt-8 rounded-lg flex flex-col w-[327px] mx-auto px-8 absolute l-[100%] b-0">
             <div class="flex flex-row my-8 justify-between w-full">
-                <p class="text-lg font-bold leading-normal tracking-[1.286px] uppercase">cart({{cartItems.length}})</p>
-                <button class="text-[15px] font-medium leading-[25px] underline opacity-50" (click)="removeAll()">Remove all</button>
+                <p class="text-lg font-bold leading-normal tracking-[1.286px] uppercase">cart({{products.length}})</p>
+                <button class="text-[15px] font-medium leading-[25px] underline opacity-50 hover:text-clr-colors-darkOrange" (click)="removeAll()">Remove all</button>
             </div>
     
             <div class="pb-8 flex flex-col gap-6">
-                <div *ngFor="let item of cartItems;" class="flex flex-row justify-between">
+                <div *ngFor="let item of products;" class="flex flex-row justify-between">
                     <img src={{item.desktopImg}} alt="" class="w-16 rounded-lg ">
                     <div class="my-auto">
                         <h1 class="font-bold leading-[25px] text-[15px]">{{item.shortName}}</h1>
@@ -19,12 +19,12 @@
                         <button (click)="inc()" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">+</button>
                     </div>
                 </div>
-                <div *ngIf="cartItems.length === 0" class="font-normal text-start capitalize tracking-wider">The card is empty</div>
+                <div *ngIf="products.length === 0" class="font-normal text-start capitalize tracking-wider">The card is empty</div>
             </div>
     
             <div class="flex justify-between">
                 <p class="opacity-50 uppercase text-[15px] leading-[25px]">total</p>
-                <p class="font-bold uppercase text-lg leading-normal ">$ {{getTotal()}}</p>
+                <p class="font-bold uppercase text-lg leading-normal ">$ {{getTotal()  | number: '1.2-2'}}</p>
             </div>
             <button routerLink="checkout" class="text-white text-center text-[13px] font-bold leading-normal tracking-[1px] uppercase bg-clr-colors-darkOrange hover:bg-clr-colors-lightOrange py-[15px] mt-6 mb-8">checkout</button>
         </div>
