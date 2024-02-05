@@ -41,7 +41,6 @@ export class CategoriesComponent implements OnInit {
       const category = params['category'];
       this.productService.getProductByCategory(category).subscribe((d) => {
         this.product = d;
-        console.log(d);
       });
     });
   }

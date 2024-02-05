@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Category, Product } from '../shared/models/product';
+import { Component } from '@angular/core';
+import { Product } from '../shared/models/product';
 import { CommonModule } from '@angular/common';
 import { ButtonDirective } from '../design-system/button.directive';
 import { ProductService } from '../shared/services/product.service';
@@ -13,36 +13,41 @@ import { ProductService } from '../shared/services/product.service';
 })
 export class CartComponent {
   products: Product[] = [];
-  @Input() public size = 0;
-  @Output() public changedSize = new EventEmitter<number>();
-  outputMessage: number = 1;
 
   constructor(private productService: ProductService) {
-    this.productService.getProducts().subscribe((d) => {
-      this.products = d.filter((i) => i.amount > 0);
+    this.productService.getProducts().subscribe((data) => {
+      this.products = data.filter((item) => item.amount > 0);
     });
   }
 
-  dec() {
-    this.resize(-1);
+  dec(product: Product) {
+    product.amount = Math.max(0, product.amount - 1);
+    this.updateProductAmount(product.id, product.amount);
   }
 
-  inc() {
-    this.resize(+1);
+  inc(product: Product) {
+    product.amount = Math.min(100, product.amount + 1);
+    this.updateProductAmount(product.id, product.amount);
   }
 
-  resize(d: number) {
-    this.size = Math.min(100, Math.max(0, +this.size + d));
-    this.changedSize.emit(this.size);
+  updateProductAmount(productId: number, newAmount: number) {
+    this.productService
+      .updateProductAmount(productId, newAmount)
+      .subscribe(() => {
+        console.log('updated successfully');
+      });
   }
 
   removeAll() {
-    this.products = [];
+    this.products.forEach((product) => {
+      product.amount = 0;
+      this.updateProductAmount(product.id, 0);
+    });
   }
 
   getTotal(): number {
     return this.products.reduce(
-      (sum, item) => (sum + item.price * item.amount) * 1.2 + 50,
+      (total, product) => total + product.price * product.amount,
       0
     );
   }

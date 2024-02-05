@@ -13,10 +13,10 @@
                         <h1 class="font-bold leading-[25px] text-[15px]">{{item.shortName}}</h1>
                         <p class=" text-[14px] font-bold opacity-50 leading-[25px]">$ {{item.price}}</p>
                     </div>
-                    <div class="bg-clrDarkGrey flex flex-row items-center w-[96px] h-8 my-auto">
-                        <button (click)="dec()" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">-</button>
+                    <div class="bg-clrDarkGrey flex flex-row items-center w-[96px] h-8 my-auto"  >
+                        <button (click)="dec(item)" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">-</button>
                         <span class="w-10 flex justify-center text-black text-[13px] font-bold tracking-[1px] uppercase">{{item.amount}}</span>
-                        <button (click)="inc()" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">+</button>
+                        <button (click)="inc(item)" class="hover:text-clrDarkOrange flex w-10 justify-center items-center h-full">+</button>
                     </div>
                 </div>
                 <div *ngIf="products.length === 0" class="font-normal text-start capitalize tracking-wider">The card is empty</div>

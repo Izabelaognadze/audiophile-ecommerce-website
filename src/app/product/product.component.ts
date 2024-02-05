@@ -33,8 +33,7 @@ import { ButtonDirective } from '../design-system/button.directive';
 })
 export class ProductComponent implements OnInit {
   product: Product[] = [];
-  @Input() public size = 0;
-  @Output() public changedSize = new EventEmitter<number>();
+  size!: number;
 
   constructor(
     public productService: ProductService,
@@ -44,14 +43,11 @@ export class ProductComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.productService.getProductById(+params['id']).subscribe((d) => {
         this.product = [d];
+        this.size = this.product[0]?.amount || 0;
       });
     });
-
-    this.changedSize.emit(this.outputMessage);
-    console.log(this.changedSize);
   }
 
-  outputMessage: number = 1;
   dec() {
     this.resize(-1);
   }
@@ -60,9 +56,18 @@ export class ProductComponent implements OnInit {
     this.resize(+1);
   }
 
-  resize(delta: number) {
-    this.size = Math.min(100, Math.max(0, +this.size + delta));
-    this.changedSize.emit(this.size);
+  resize(d: number) {
+    this.size = Math.min(100, Math.max(this.size + d));
+
+    const newAmount = this.size;
+    const productId = this.product[0]?.id;
+    if (productId) {
+      this.productService
+        .updateProductAmount(productId, newAmount)
+        .subscribe(() => {
+          console.log('updated successfully');
+        });
+    }
   }
 
   ngOnInit(): void {
@@ -70,6 +75,9 @@ export class ProductComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
       }
+      (err: string) => {
+        console.error('Error updating product amount:', err);
+      };
     });
   }
 }
