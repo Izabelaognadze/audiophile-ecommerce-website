@@ -33,7 +33,7 @@ import { ButtonDirective } from '../design-system/button.directive';
 })
 export class ProductComponent implements OnInit {
   product: Product[] = [];
-  size!: number;
+  size = 0;
 
   constructor(
     public productService: ProductService,
@@ -43,31 +43,33 @@ export class ProductComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.productService.getProductById(+params['id']).subscribe((d) => {
         this.product = [d];
-        this.size = this.product[0]?.amount || 0;
       });
     });
   }
 
   dec() {
-    this.resize(-1);
+    this.size--;
   }
 
   inc() {
-    this.resize(+1);
+    this.size++;
   }
 
-  resize(d: number) {
-    this.size = Math.min(100, Math.max(this.size + d));
-
-    const newAmount = this.size;
+  resize() {
     const productId = this.product[0]?.id;
     if (productId) {
+      const newAmount = Math.min(
+        100,
+        Math.max(0, this.size + this.product[0].amount)
+      );
       this.productService
         .updateProductAmount(productId, newAmount)
         .subscribe(() => {
           console.log('updated successfully');
         });
     }
+    window.location.reload();
+    this.size = 0;
   }
 
   ngOnInit(): void {

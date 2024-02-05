@@ -61,13 +61,9 @@ json-server --watch .\api\db.json
 
 ### Built with
 
-- Semantic HTML5 markup
-- Tailwind Css
-- Flexbox
-- Grid
-- Mobile-first workflow
-- TypeScript
 - Angular
+- Tailwind Css
+- TypeScript
 
 ## Author
 

@@ -13,6 +13,8 @@ import { LabelDirective } from '../design-system/label.directive';
 import { InputDirective } from '../design-system/input.directive';
 import { Product } from '../shared/models/product';
 import { ProductService } from '../shared/services/product.service';
+import { RouterModule } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-checkout',
@@ -25,6 +27,7 @@ import { ProductService } from '../shared/services/product.service';
     ReactiveFormsModule,
     LabelDirective,
     InputDirective,
+    RouterModule,
   ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css',
@@ -34,8 +37,12 @@ export class CheckoutComponent {
   products: Product[] = [];
   form;
 
-  constructor(private fb: FormBuilder, private productService: ProductService) {
-    this.form = fb.group({
+  constructor(
+    private fb: FormBuilder,
+    private productService: ProductService,
+    private location: Location
+  ) {
+    this.form = this.fb.group({
       name: new FormControl('', [Validators.pattern(/[A-Za-z ]{1,}/)]),
       email: new FormControl('', Validators.email),
       phone: new FormControl(
@@ -53,6 +60,10 @@ export class CheckoutComponent {
     this.productService.getProducts().subscribe((d) => {
       this.products = d.filter((i) => i.amount > 0);
     });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   get name() {
