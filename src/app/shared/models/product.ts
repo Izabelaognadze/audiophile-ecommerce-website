@@ -23,6 +23,12 @@ export interface Product {
   galleryDesImg3: string;
   featuresStart: string;
   featuresEnd: string;
+  itemsInTheBox: ItemsInTheBox[];
+}
+
+export interface ItemsInTheBox {
+  amount: number;
+  item: string;
 }
 
 export enum Category {

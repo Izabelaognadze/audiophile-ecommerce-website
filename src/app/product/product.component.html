@@ -33,9 +33,11 @@
                 <p>{{i.featuresEnd}}</p>
             </div>
         </div>
-        <div class="flex flex-col md:flex-row lg:flex-col gap-6 md:gap-[11px] lg:gap-8">
+        <div class="flex flex-col gap-6 md:gap-[11px] lg:gap-8">
             <h2 class="text-2xl font-MainFont font-bold leading-[36px] tracking-[0.857px] lg:w-[225px] uppercase text-black md:w-[339px]">in the box</h2>
-            <div class="gap-2">
+            <div class="flex flex-row gap-[21px] font-MainFont leading-[25px] text-[15px]" *ngFor="let boxItems of i.itemsInTheBox">
+                <p class="font-bold text-clr-colors-darkOrange w-5">{{boxItems.amount}}x</p>
+                <p class="text-black opacity-50 font-medium capitalize">{{boxItems.item}}</p>
             </div>
         </div>
     </div>
