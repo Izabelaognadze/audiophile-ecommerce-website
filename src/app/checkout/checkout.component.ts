@@ -15,6 +15,8 @@ import { Product } from '../shared/models/product';
 import { ProductService } from '../shared/services/product.service';
 import { RouterModule } from '@angular/router';
 import { Location } from '@angular/common';
+import { ButtonDirective } from '../design-system/button.directive';
+import { ConfirmationComponent } from '../confirmation/confirmation.component';
 
 @Component({
   selector: 'app-checkout',
@@ -28,14 +30,21 @@ import { Location } from '@angular/common';
     LabelDirective,
     InputDirective,
     RouterModule,
+    ButtonDirective,
+    ConfirmationComponent,
   ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css',
 })
 export class CheckoutComponent {
-  selectedPaymentMethod!: boolean;
+  selectedPaymentMethod: boolean = true;
   products: Product[] = [];
+  total = 0;
+  shipping = 50;
+  vat = 1;
+  grandTotal = 1000;
   form;
+  toggle = true;
 
   constructor(
     private fb: FormBuilder,

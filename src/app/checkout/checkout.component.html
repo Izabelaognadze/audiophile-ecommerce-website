@@ -90,7 +90,7 @@
                             <p class="w-full md:w-[49%] text-xs font-bold tracking-[-0.214px] mb-[17px] md:mb-0">Payment Method</p>
                             <div class="w-full md:w-[49%] gap-4 flex flex-col">
                                 <div class="payment">
-                                    <input type="radio" value="Yes" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(true)">
+                                    <input type="radio" value="Yes" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(false)">
                                     <label for="e-Money">e-Money</label>
                                 </div>
                                 <div class="payment">
@@ -127,7 +127,7 @@
                     
                 </form>
             </div>
-            <div class="w-full lg:w-[400px] bg-white rounded-lg py-8 px-6 md:px-[33px]">
+            <div class="w-full lg:w-[400px] bg-white rounded-lg py-8 px-6 md:px-7">
                 <h1 class="text-lg font-bold tracking-[1.286px] uppercase mb-[31px]">summary</h1>
                 <div class="flex flex-row justify-between mb-6" *ngFor="let i of products">
                     <div class="flex gap-5">
@@ -139,27 +139,33 @@
                     </div>
                     <p class="items-center text-sm h-8 my-auto text-clr-colors-bgHover">x{{i.amount}}</p>
                 </div>
-                <div class="">
-                    <h2 class="">TOTAL</h2>
-                    <p class="">$ </p>
+                <div class="flex justify-between my-auto">
+                    <h2 class="text-sm font-medium text-left text-black opacity-50">TOTAL</h2>
+                    <p class="text-lg font-bold">$ {{total | number : '1.2-2'}}</p>
                 </div>
 
-                <div class="">
-                    <h2 class=""></h2>
-                    <p class=""></p>
+                <div class="flex justify-between my-auto mt-2">
+                    <h2 class="text-sm font-medium text-left text-black opacity-50">SHIPPING</h2>
+                    <p class="text-lg font-bold">$ {{shipping | number : '1.2-2'}}</p>
                 </div>
 
-                <div class="">
-                    <h3 class=""></h3>
-                    <p class=""></p>
+                <div class="flex justify-between my-auto mt-2">
+                    <h2 class="text-sm font-medium text-left text-black opacity-50"> VAT (INCLUDED)</h2>
+                    <p class="text-lg font-bold">$ {{vat | number : '1.2-2'}}</p>
                 </div>
 
-                <div class="">
-                    <h3 class=""></h3>
-                    <p class=""></p>
+                <div class="flex justify-between my-auto mt-6">
+                    <h2 class="text-sm font-medium text-left text-black opacity-50"> GRAND TOTAL</h2>
+                    <p class="text-lg font-bold text-clr-colors-darkOrange">$ {{grandTotal | number : '1.2-2'}}</p>
                 </div>
+
+                <button appButton class=" w-full" (click)="toggle = true">continue</button>
             </div>
         </div>
     </div>
+</div>
+
+<div class="" *ngIf="toggle">
+    <app-confirmation></app-confirmation>
 </div>
 <app-footer></app-footer>

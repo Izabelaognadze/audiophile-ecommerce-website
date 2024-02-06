@@ -22,3 +22,6 @@
 .responsive-images img:nth-child(3) {
   @apply hidden lg:block rounded-lg;
 }
+.bgclr {
+  @apply bg-black h-screen bg-opacity-40 z-50 absolute top-[95px] left-0 right-0 bottom-0;
+}
