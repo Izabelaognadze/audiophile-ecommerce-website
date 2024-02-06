@@ -68,10 +68,8 @@ export class ProductComponent implements OnInit {
   resize() {
     const productId = this.product[0]?.id;
     if (productId) {
-      const newAmount = Math.min(
-        100,
-        Math.max(0, this.size + this.product[0].amount)
-      );
+      const newAmount =
+        Math.min(100, Math.max(0, this.size)) + this.product[0].amount;
       this.productService
         .updateProductAmount(productId, newAmount)
         .subscribe(() => {
