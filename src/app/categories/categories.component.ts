@@ -13,6 +13,7 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ButtonDirective } from '../design-system/button.directive';
 import { BestGearComponent } from '../best-gear/best-gear.component';
+import { ShopComponent } from '../shop/shop.component';
 
 @Component({
   selector: 'app-categories',
@@ -25,6 +26,7 @@ import { BestGearComponent } from '../best-gear/best-gear.component';
     FooterComponent,
     ButtonDirective,
     BestGearComponent,
+    ShopComponent,
   ],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css',

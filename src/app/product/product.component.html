@@ -66,6 +66,7 @@
     </div>
 </div>
 
+<h3 class="text-center text-2xl font-bold leading-9 tracking-[0.857px] uppercase md:text-[32px] md:tracking-[1.143px] mb-10 md:mb-14 lg:mb-16">you may also like</h3>
 <div class="common-margins flex flex-col md:flex-row md:gap-4">
     <div class="flex flex-col text-center font-MainFont" *ngFor="let i of youMayAlsoLikeProducts">
         <div class="responsive-images">
@@ -77,5 +78,12 @@
         <button [routerLink]="['/product', i.id]" appButton class="w-40 mx-auto">see product</button>
     </div>
 </div>
+
+<div class="flex shop-button flex-col md:flex-row common-margins gap-[68px] md:gap-[10px] lg:gap-[30px] mt-[172px] mb-[120px] md:mt-[172px] lg:mt-[240px] lg:mb-40 justify-between">
+    <app-shop class="w-[100%]" routerLink="/category/HEADPHONES" mainImg="assets/shared/desktop/image-category-thumbnail-headphones.png" title="HEADPHONES"></app-shop>
+    <app-shop class="w-[100%]" routerLink="/category/SPEAKERS" mainImg="assets/shared/desktop/image-category-thumbnail-speakers.png" title="SPEAKERS"></app-shop>
+    <app-shop class="w-[100%]" routerLink="/category/EARPHONES" mainImg="assets/shared/desktop/image-category-thumbnail-earphones.png" title="EARPHONES"></app-shop>
+</div>
+
 <app-best-gear></app-best-gear>
 <app-footer></app-footer>

@@ -15,5 +15,4 @@ export class ShopComponent {
   @Input() public mainImg = '';
   @Input() public title = '';
   @Input() public routerLink = '';
-  products: Product[] = [];
 }

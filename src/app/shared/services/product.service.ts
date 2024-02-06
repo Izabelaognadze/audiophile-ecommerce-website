@@ -21,9 +21,8 @@ export class ProductService {
   }
 
   updateProductAmount(id: number, newAmount: number) {
-    const updateUrl = `${this.url}/${id}`;
     const payload = { amount: newAmount };
-    return this.http.patch(updateUrl, payload);
+    return this.http.patch(`${this.url}/${id}`, payload);
   }
 
   constructor(private http: HttpClient) {}
