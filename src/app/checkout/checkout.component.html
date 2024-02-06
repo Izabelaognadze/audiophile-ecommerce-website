@@ -90,12 +90,12 @@
                             <p class="w-full md:w-[49%] text-xs font-bold tracking-[-0.214px] mb-[17px] md:mb-0">Payment Method</p>
                             <div class="w-full md:w-[49%] gap-4 flex flex-col">
                                 <div class="payment">
-                                    <input type="radio" value="Yes" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(false)">
-                                    <label for="e-Money">e-Money</label>
+                                    <input class="h-4 my-auto" type="radio" value="Yes" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(false)">
+                                    <label class="text-sm font-bold tracking-[-0.25px]" for="e-Money">e-Money</label>
                                 </div>
                                 <div class="payment">
-                                    <input type="radio" value="No" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(true)">
-                                    <label for="Cash">Cash on Delivery</label>
+                                    <input class="h-4 my-auto" type="radio" value="No" name="radioButton" [(ngModel)]="selectedPaymentMethod" (change)="updatePaymentMethod(true)">
+                                    <label class="text-sm font-bold tracking-[-0.25px]" for="Cash">Cash on Delivery</label>
                                 </div>
                             </div>
                         </div>

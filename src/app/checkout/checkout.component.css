@@ -20,12 +20,4 @@ h3 {
 
 .payment {
   @apply flex border-2 border-clr-colors-border rounded-lg py-4 pl-5 gap-5;
-
-  input {
-    @apply h-4 my-auto;
-  }
-
-  label {
-    @apply text-sm font-bold tracking-[-0.25px];
-  }
 }
