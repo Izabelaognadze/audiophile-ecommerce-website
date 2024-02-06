@@ -24,6 +24,10 @@ export interface Product {
   featuresStart: string;
   featuresEnd: string;
   itemsInTheBox: ItemsInTheBox[];
+  youMayAlsoLike: number[];
+  mobileYouMayAlsoLike?: string;
+  tabletYouMayAlsoLike?: string;
+  desktopYouMayAlsoLike?: string;
 }
 
 export interface ItemsInTheBox {

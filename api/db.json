@@ -47,7 +47,11 @@
           "amount":1,
           "item" : "Travel Bag"
         }
-      ]
+      ],
+      "youMayAlsoLike" : [2,3,4],
+      "mobileYouMayAlsoLike" : "assets/shared/mobile/image-xx99-mark-two-headphones.jpg",
+      "tabletYouMayAlsoLike" : "assets/shared/tablet/image-xx99-mark-two-headphones.jpg",
+      "desktopYouMayAlsoLike" : "assets/shared/desktop/image-xx99-mark-two-headphones.jpg"
     },
     {
       "id": 2,
@@ -92,7 +96,11 @@
           "amount":1,
           "item" : "3.5mm 5m Audio Cable"
         }
-      ]
+      ],
+      "youMayAlsoLike" : [1, 3, 4],
+      "mobileYouMayAlsoLike" : "assets/shared/mobile/image-xx99-mark-one-headphones.jpg",
+      "tabletYouMayAlsoLike" : "assets/shared/tablet/image-xx99-mark-one-headphones.jpg",
+      "desktopYouMayAlsoLike" : "assets/shared/desktop/image-xx99-mark-one-headphones.jpg"
     },
     {
       "id": 3,
@@ -137,7 +145,11 @@
           "amount":1,
           "item" : "3.5mm 5m Audio Cable"
         }
-      ]
+      ],
+      "youMayAlsoLike" : [2, 1, 4],
+      "mobileYouMayAlsoLike" : "assets/shared/mobile/image-xx59-headphones.jpg",
+      "tabletYouMayAlsoLike" : "assets/shared/tablet/image-xx59-headphones.jpg",
+      "desktopYouMayAlsoLike" : "assets/shared/desktop/image-xx59-headphones.jpg"
     },
     {
       "id": 4,
@@ -186,7 +198,11 @@
           "amount":1,
           "item" : "10m Optical Cable"
         }
-      ]
+      ],
+      "youMayAlsoLike" : [5, 2, 3],
+      "mobileYouMayAlsoLike" : "assets/shared/mobile/image-zx9-speaker.jpg",
+      "tabletYouMayAlsoLike" : "assets/shared/tablet/image-zx9-speaker.jpg",
+      "desktopYouMayAlsoLike" : "assets/shared/desktop/image-zx9-speaker.jpg"
     },
     {
       "id": 5,
@@ -235,7 +251,11 @@
           "amount":1,
           "item" : "7.5m Optical Cable"
         }
-      ]
+      ],
+      "youMayAlsoLike" : [4, 2, 3],
+      "mobileYouMayAlsoLike" : "assets/shared/mobile/image-zx7-speaker.jpg",
+      "tabletYouMayAlsoLike" : "assets/shared/tablet/image-zx7-speaker.jpg",
+      "desktopYouMayAlsoLike" : "assets/shared/desktop/image-zx7-speaker.jpg"
     },
     {
       "id": 6,
@@ -284,7 +304,8 @@
           "amount":1,
           "item" : "Travel Pouch"
         }
-      ]
+      ],
+      "youMayAlsoLike" : [2, 3, 4]
     }
   ]
 }

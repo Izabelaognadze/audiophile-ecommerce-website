@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../shared/models/product';
 import { ProductService } from '../shared/services/product.service';
 import {
@@ -33,6 +33,8 @@ import { ButtonDirective } from '../design-system/button.directive';
 })
 export class ProductComponent implements OnInit {
   product: Product[] = [];
+  youMayAlsoLikeProducts: Product[] = [];
+  productIDs: number[] = [];
   size = 0;
 
   constructor(
@@ -43,7 +45,15 @@ export class ProductComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.productService.getProductById(+params['id']).subscribe((d) => {
         this.product = [d];
+        this.productIDs = this.product[0].youMayAlsoLike;
       });
+    });
+
+    this.productService.getProducts().subscribe((products) => {
+      this.youMayAlsoLikeProducts = products.filter((product) =>
+        this.productIDs.includes(product.id)
+      );
+      console.log(this.youMayAlsoLikeProducts);
     });
   }
 

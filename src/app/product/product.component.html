@@ -64,7 +64,18 @@
             <img src={{i.galleryDesImg3}} alt="">
         </div>
     </div>
-    
+</div>
+
+<div class="common-margins flex flex-col md:flex-row md:gap-4">
+    <div class="flex flex-col text-center font-MainFont" *ngFor="let i of youMayAlsoLikeProducts">
+        <div class="responsive-images">
+            <img src={{i.mobileYouMayAlsoLike}} alt="" class="">
+            <img src={{i.tabletYouMayAlsoLike}} alt="" class="">
+            <img src={{i.desktopYouMayAlsoLike}} alt="" class="">
+        </div>
+        <h2 class="mb-8 mt-8 md:mt-10 uppercase tracking-[1.714px] font-bold text-2xl">{{i.shortName}}</h2>
+        <button [routerLink]="['/product', i.id]" appButton class="w-40 mx-auto">see product</button>
+    </div>
 </div>
 <app-best-gear></app-best-gear>
 <app-footer></app-footer>
