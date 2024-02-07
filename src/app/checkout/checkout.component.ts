@@ -39,10 +39,9 @@ import { ConfirmationComponent } from '../confirmation/confirmation.component';
 export class CheckoutComponent {
   selectedPaymentMethod: boolean = true;
   products: Product[] = [];
-  total = 0;
   shipping = 50;
-  vat = 1;
-  grandTotal = 1000;
+  vat!: number;
+  grandTotal = 0;
   form;
   toggle = true;
 
@@ -68,7 +67,16 @@ export class CheckoutComponent {
 
     this.productService.getProducts().subscribe((d) => {
       this.products = d.filter((i) => i.amount > 0);
+      this.vat = this.getTotal() * 0.2;
+      this.grandTotal = this.shipping + this.vat + this.getTotal();
     });
+  }
+
+  getTotal(): number {
+    return this.products.reduce(
+      (total, product) => total + product.price * product.amount,
+      0
+    );
   }
 
   goBack(): void {

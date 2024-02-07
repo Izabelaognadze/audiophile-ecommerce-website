@@ -14,11 +14,17 @@ import { RouterModule } from '@angular/router';
 })
 export class ConfirmationComponent {
   products: Product[] = [];
-  grandTotal = 1000;
 
   constructor(private productService: ProductService) {
     this.productService.getProducts().subscribe((d) => {
       this.products = d.filter((i) => i.amount > 0);
     });
+  }
+
+  getTotal(): number {
+    return this.products.reduce(
+      (total, product) => (total + product.price * product.amount) * 1.2 + 50,
+      0
+    );
   }
 }

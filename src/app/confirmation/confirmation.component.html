@@ -4,7 +4,7 @@
             <img src="assets/shared/desktop/check.png" alt="" class="w-16 h-16 mb-6">
             <h2 class="text-2xl md:text-[32px] font-bold leading-[1.13] tracking-[1.14px]">THANK YOU FOR YOUR ORDER</h2>
             <p class="opacity-50 text-[15px] leading-[1.67] font-medium mt-6 mb-6 md:mb-[33px]"> You will receive an email confirmation shortly.</p>
-            <div class="rounded-lg flex flex-col md:flex-row">
+            <div class="rounded-lg flex flex-col md:flex-row w-full">
                 <div class="bg-clr-colors-darkGrey p-6">
                     <div class="flex flex-row justify-between" *ngFor="let i of products">
                         <div class="flex gap-4">
@@ -26,7 +26,7 @@
 
                 <div class="bg-black text-white p-6">
                     <p class="text-[15px] font-bold leading-[1.67] opacity-50 mb-1">GRAND TOTAL</p>
-                    <p class="text-lg font-bold">$ {{grandTotal | number: '1.0-0'}}</p>
+                    <p class="text-lg font-bold">$ {{getTotal() | number: '1.0-0'}}</p>
                 </div>
             </div>
             <button appButton class="w-full" [routerLink]="['/']">BACK TO HOME</button>
