@@ -43,7 +43,7 @@ export class CheckoutComponent {
   vat!: number;
   grandTotal = 0;
   form;
-  toggle = true;
+  toggle = false;
 
   constructor(
     private fb: FormBuilder,
